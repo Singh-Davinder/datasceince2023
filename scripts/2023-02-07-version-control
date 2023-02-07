@@ -1,0 +1,29 @@
+# Intro to version control
+
+## why version control system?
+- Efficient way of keeping track of changes in a document
+- keep track of changes in an y type of sof document: txt, table images
+
+## Confilcts in version control
+- Conflict happens when someone changes the same part of a document at the same time
+
+## what is a commit
+- saves the changes made to tfiles to a repository
+-it does not have to be all files at a time
+
+## what is a repository?
+- it is the whole of files and file versions, along with the history of changes made (commits)
+
+## MDiffernce between old and modern versions control systems 
+-centraliztion vs distribution
+git hint
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint:         git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint:         git branch -m <name>
