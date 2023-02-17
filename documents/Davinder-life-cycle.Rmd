@@ -1,0 +1,14 @@
+---
+title: "my_data_life_cycle"
+output:
+  pdf_document: default
+  html_document: default
+date: "2023-02-16"
+---
+# create my own data cycle
+1. plan- layout plan to conduct research
+2. collection- collecting data that can be used for analyzing
+3. processing- Taking the stored data and having the system process the information
+4. visualization - make graphs or any visual to showcase data
+5. storing- saving data for further research
+6. analysis- interpreting what the data means through the visualization of graphs
