@@ -20,7 +20,7 @@ Note: remember that workingdirectories in a project and an R chunk are not alway
 # 1. Describing the working data set
 
 UHURU data set
-
+The UHURU(ungulate herbivory under rainfall uncertainty) aim to characterize the effects of successively removing the largest size classes of herbivores from the system as well as evaluate how the direction and magnitude of these effects are shaped  by variation in precipation regimes
 ## 2. Reading the data set
 We are reading a data set in TSV format. This is a "tab separted values" file.
 To read it into R we use the function `read.csv()` with the `sep =` argument set to `"\t"` which represents a tab in computer language.
@@ -102,3 +102,15 @@ ggplot(data = acacia, mapping = aes(x = HEIGHT, y = AXIS1, color = TREATMENT)) +
 ```{r}
 colors()
 ```
+
+### experimental treatment and goal
+The goal experimental treatment is to find which treatment is the best and growing the largest trees.
+
+### different variables that were measured
+the different variables that were measured were mega, meso, open, and the total.
+
+### what is the influnce of experimental treatment?
+The influence of the experimental treatment is the meso treatment
+
+### what happened to the acacias in the open plot?
+The open treatment didn't show much growth comprared to other treatment groups as meso, and mega had trees of larger height
