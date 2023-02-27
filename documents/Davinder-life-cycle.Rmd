@@ -12,3 +12,4 @@ date: "2023-02-16"
 4. visualization - make graphs or any visual to showcase data
 5. storing- saving data for further research
 6. analysis- interpreting what the data means through the visualization of graphs
+install.packages("ggplot2")
