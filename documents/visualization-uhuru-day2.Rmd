@@ -46,6 +46,13 @@ ggplot(data = acacia, mapping = aes(x = HEIGHT, y = AXIS1, color = TREATMENT)) +
   labs(x = "Tree height", y = "Tree axis 1", title = "Acacia trees size relationships")
 
 ```
+
+## facet_wrap
+```{r}
+ggplot(acacia, aes(x = CIRC, y = HEIGHT, color = TREATMENT)) +
+  geom_point(size = 3, alpha = 0.5) +
+  facet_wrap(~TREATMENT)
+```
 ## rescaling axes
 ```{r}
 ggplot(data = acacia, mapping = aes(x = CIRC, y = HEIGHT)) +
