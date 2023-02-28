@@ -1,0 +1,136 @@
+---
+title: "visualization-uhuru-day2"
+author: "Davinder Singh"
+date: "2023-02-28"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r eval = TRUE}
+getwd()
+
+```
+
+```{r eval = TRUE}
+read.csv(file = "../data-raw/ACACIA_DREPANOLOBIUM_SURVEY.txt", sep = "\t")
+```
+
+``` {r eval = TRUE}
+acacia <- read.csv(file = "../data-raw/ACACIA_DREPANOLOBIUM_SURVEY.txt", sep = "\t")
+```
+
+```{r}
+acacia$HEIGHT <- as.numeric(acacia$HEIGHT)
+acacia$HEIGHT
+```
+
+```{r}
+read.csv(file = "../data-raw/ACACIA_DREPANOLOBIUM_SURVEY.txt",
+         sep = "\t",
+         na.strings = "dead")
+is.numeric(acacia$HEIGHT)
+```
+
+```{r}
+plot(x = acacia$HEIGHT, y = acacia$AXIS1, main = "Acacia height vs axis1")
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(data = acacia, mapping = aes(x = HEIGHT, y = AXIS1, color = TREATMENT)) +
+  geom_point(size = 5) +
+  labs(x = "Tree height", y = "Tree axis 1", title = "Acacia trees size relationships")
+
+```
+## rescaling axes
+```{r}
+ggplot(data = acacia, mapping = aes(x = CIRC, y = HEIGHT)) +
+geom_point(size = 3, color = "blue", alpha = 0.5) +
+scale_y_log10() +
+scale_x_log10()
+```
+
+``` {r}
+ggplot(acacia, aes(x = CIRC, y = HEIGHT)) +
+geom_point(size = 3, alpha = 0.5) +
+geom_smooth()
+```
+# what happens when we fit a linear model to data grouped by treatment?
+```{r}
+ggplot(acacia, aes(x = CIRC, y = HEIGHT, color = TREATMENT)) +
+geom_point(size = 3, alpha = 0.5) +
+geom_smooth()
+```
+What happens is that there is a line of best fit and the data for each treatment
+
+### line type
+```{r}
+ggplot(acacia, aes(x = CIRC, y = HEIGHT, color = TREATMENT, linetype = TREATMENT)) +
+geom_point(size = 3, alpha = 0.5) +
+geom_smooth()
+```
+### method = geom_smooth()
+```{r}
+ggplot(acacia, aes(x = CIRC, y = HEIGHT, color = TREATMENT)) +
+geom_point(size = 3, alpha = 0.5) +
+geom_smooth(method = "lm") # try with "glm"
+```
+
+## geom_bar
+```{r}
+ggplot(data = acacia, mapping = aes(x = TREATMENT)) +
+geom_bar()
+```
+
+## geom_histogram()
+```{r}
+ggplot(acacia, aes(x = CIRC)) +
+geom_histogram(fill = "red")
+```
+## proportion of data colored by treatment
+```{r}
+ggplot(acacia, aes(x = CIRC, color = TREATMENT)) +
+geom_histogram(bins = 20)
+```
+## assign color with gray outline
+```{r}
+ggplot(acacia, aes(x = CIRC, fill = TREATMENT)) +
+geom_histogram(bins = 20, color = "gray")
+```
+
+## change these values across layers
+```{r}
+ggplot() +
+geom_point(data = acacia,
+           mapping = aes(x = CIRC, y = HEIGHT,
+                         color = TREATMENT)) +
+geom_smooth(data = acacia,
+            mapping = aes(x = CIRC, y = HEIGHT))
+```
+
+## plot categorical and continous data on same plot
+```{r}
+ggplot() +
+geom_point(data = acacia,
+           mapping = aes(x = CIRC, y = HEIGHT,
+                         color = TREATMENT)) +
+geom_smooth(data = acacia,
+            mapping = aes(x = CIRC, y = HEIGHT)) +
+geom_histogram(data = acacia,
+               mapping = aes(x = CIRC, color = TREATMENT),
+               alpha = 0.1)
+```
+
+#gg save
+```{r}
+ggsave("acacia_by_treatment.jpg")
+```
+
+## size of image in inches
+```{r}
+ggsave("acacia_by_treatment.pdf", height = 5, width = 5)
+```
