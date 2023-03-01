@@ -53,12 +53,48 @@ ggplot(acacia, aes(x = CIRC, y = HEIGHT, color = TREATMENT)) +
   geom_point(size = 3, alpha = 0.5) +
   facet_wrap(~TREATMENT)
 ```
-## rescaling axes
+## rescaling axes excerise 1
 ```{r}
 ggplot(data = acacia, mapping = aes(x = CIRC, y = HEIGHT)) +
 geom_point(size = 3, color = "blue", alpha = 0.5) +
 scale_y_log10() +
-scale_x_log10()
+scale_x_log10() +
+labs(xlab = "Circumference",
+     ylab = "Canopy Diameter ")
+```
+
+
+```{r}
+ggplot(data = acacia, mapping = aes(x = ANT, y = HEIGHT)) +
+geom_point(size = 3, color = "blue", alpha = 0.5) 
+```
+
+```{r}
+ggplot(data = acacia, mapping = aes(x = ANT, y = HEIGHT)) +
+geom_point(size = 3, color = "blue", alpha = 0.5) 
+geom_smooth()
+```
+```{r}
+ggplot(data = acacia, mapping = aes(x = ANT)) +
+  geom_bar()
+```
+
+```{r}
+ggplot(data = acacia, mapping = aes(x = as.double(HEIGHT))) +
+  geom_histogram()
+```
+
+```{r}
+ggplot(data = acacia, mapping = aes(x = AXIS1)) +
+  geom_histogram(fill = "red", alpha = 0.3) + labs(xlab ="Canopy Diameter",ylab = "Number of Acacia") +
+  facet_wrap(~AXIS1)
+```
+
+```{r}
+ggplot(data = acacia, mapping = aes(x = AXIS2)) +
+  geom_histogram(fill = "black", alpha = 0.3) + labs(xlab ="Canopy Diameter",ylab = "Number of Acacia") +
+  facet_wrap(~AXIS2)
+```
 ```
 
 ``` {r}

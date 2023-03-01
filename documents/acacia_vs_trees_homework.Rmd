@@ -1,0 +1,20 @@
+---
+title: "Acacia vs trees"
+author: "Davinder Singh"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+getwd()
+```
+
+```{r eval= TRUE}
+trees <- read_tsv(files ="../data-raw/TREE_SURVEYS.txt",
+               col_types = list(HEIGHT = col_double(),
+                                AXIS_2 = col_double()))
+```
