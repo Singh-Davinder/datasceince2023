@@ -35,14 +35,14 @@ head(trees)
 ```
 
 ```{r}
-ss <- subset(trees, select = c("SURVEY", "YEAR","SITE", "canopy_area"))
+subset(trees, select = c(SURVEY, YEAR,SITE, canopy_area))
 ```
 
 ```{r}
 library(ggplot2)
-ggplot(data = trees, mapping = aes(x = canopy_area, y = HEIGHT)) +
-geom_point(size = 2, color = "purple") +
-  facet_wrap(~TREATMENT)
+ggplot(data = trees, mapping = aes(x = canopy_area, y = HEIGHT, color = TREATMENT)) +
+geom_point(size = 2) +
+  facet_wrap(~SPECIES)
 ```
 
 ```{r}
@@ -61,7 +61,7 @@ trees2 <- trees[-3839,]
 ```
 
 ```{r}
-ggplot(data = trees2, mapping = aes(x = canopy_area, y = HEIGHT)) +
-geom_point(size = 2, color = "purple") +
+ggplot(data = trees2, mapping = aes(x = canopy_area, y = HEIGHT,  color = TREATMENT)) +
+geom_point(size = 2) +
   facet_wrap(~TREATMENT)
 ```
