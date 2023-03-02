@@ -1,20 +1,67 @@
 ---
 title: "Acacia vs trees"
 author: "Davinder Singh"
-date: "`r Sys.Date()`"
-output: html_document
+date: "2023-03-01"
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+#install.packages("readr")
+library(readr)
 ```
 
 ```{r}
 getwd()
+
 ```
 
 ```{r eval= TRUE}
-trees <- read_tsv(files ="../data-raw/TREE_SURVEYS.txt",
+trees <- read_tsv(file ="../data-raw/TREE_SURVEYS.txt",
                col_types = list(HEIGHT = col_double(),
                                 AXIS_2 = col_double()))
+```
+
+```{r}
+head(trees)
+str(trees)
+```
+
+```{r}
+canopy_area <- trees$AXIS_1 * trees$AXIS_2
+canopy_area
+trees$canopy_area <- canopy_area
+head(trees)
+```
+
+```{r}
+ss <- subset(trees, select = c("SURVEY", "YEAR","SITE", "canopy_area"))
+```
+
+```{r}
+library(ggplot2)
+ggplot(data = trees, mapping = aes(x = canopy_area, y = HEIGHT)) +
+geom_point(size = 2, color = "purple") +
+  facet_wrap(~TREATMENT)
+```
+
+```{r}
+3 > 4
+numbers <- 1:10
+numbers > 4
+canopy_area > 2000
+which(canopy_area > 2000)
+canopy_area[3839]
+canopy_area[-3839]
+numbers[-4]
+```
+
+```{r}
+trees2 <- trees[-3839,]
+```
+
+```{r}
+ggplot(data = trees2, mapping = aes(x = canopy_area, y = HEIGHT)) +
+geom_point(size = 2, color = "purple") +
+  facet_wrap(~TREATMENT)
 ```
