@@ -65,3 +65,27 @@ ggplot(data = trees2, mapping = aes(x = canopy_area, y = HEIGHT,  color = TREATM
 geom_point(size = 2) +
   facet_wrap(~TREATMENT)
 ```
+names(trees)
+?read.csv
+?geom_smooth
+mode(trees$CIRC)
+mode(trees$HEIGHT)
+mode(aca$CIRC)
+mode(aca$HEIGHT)
+```{r}
+library(ggplot2)
+aca <- read.csv(file = "../data-raw/ACACIA_DREPANOLOBIUM_SURVEY.txt", sep = "\t", na.strings = "dead")
+ggplot() +
+  geom_point(data = trees, mapping = aes(x = CIRC, y = HEIGHT), size = 3, alpha = 0.5, color = "gray") +
+  labs(x = "Circumference", y = "Height") +
+  scale_x_log10() +
+  scale_y_log10() +
+  geom_smooth(method = "lm") +
+  geom_line() +
+  geom_point(data = aca, mapping = aes(x = CIRC, y = HEIGHT, color = "red")) +
+  scale_x_log10() +
+  scale_y_log10() +
+  geom_smooth(method = "lm") +
+  geom_line()
+```
+
