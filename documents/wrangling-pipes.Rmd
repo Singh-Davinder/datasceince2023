@@ -111,3 +111,14 @@ surveys %>% select(year, species_id, weight) %>%
 str(surveys_final)
 
 ```
+
+## excerise 3
+```{r}
+read.csv(file = "../data-raw/surveys (1).csv") %>%
+  filter(species_id == "DS", !is.na(weight)) -> ds_data
+str(ds_data)
+ds_data %>% arrange(year) -> ds_data_by_year
+str(ds_data_by_year)
+ds_data_by_year %>% select(year, weight) -> ds_weight_by_year
+str(ds_weight_by_year)
+```
