@@ -122,3 +122,73 @@ str(ds_data_by_year)
 ds_data_by_year %>% select(year, weight) -> ds_weight_by_year
 str(ds_weight_by_year)
 ```
+
+### Pipping to an argument that is not the first one
+
+some function does not take the dat as first argument.
+For example the 'lm()' function
+
+```{r}
+str(surveys)
+lm(formula = weight ~ year, data = surveys)
+```
+
+```{r}
+surveys %>% 
+  lm(formula = weight ~ year, data = .) # use an underscore if you are using this pipe |>
+```
+# ctrl +option + I for r chunck
+
+```{r}
+read.csv(file = "../data-raw/surveys (1).csv") %>%
+ filter(species_id == "DS", !is.na(weight)) %>% 
+  lm(weight ~ year, data = .) %>% 
+  summary()
+```
+
+
+
+# another way to pipe
+```{r}
+read.csv(file = "../data-raw/surveys (1).csv") %>%
+  filter(species_id == "DS", !is.na(weight)) -> surveys_DS 
+str(surveys_DS)
+surveys_DS %>% lm(weight ~ year, data = .) -> surveys_DS_lm 
+summary(surveys_DS_lm)
+```
+
+### grouping data or data aggreagation
+
+To get summary statistics for variables withining certain groups, we can group our data by a certain value. for that we use the fucntion 'group_by()'
+```{r}
+group_by(surveys, year)
+grouped_surveys <- group_by(surveys, year)
+```
+
+```{r}
+group_by(surveys, year, sex)
+```
+
+### Get summary statistics of groups
+
+The summary function create a new table that has the summary statistics that we asked for each group on the tibble
+```{r}
+group_by(surveys, year, sex) %>% 
+  summarize(count = n())
+```
+```{r}
+group_by(surveys, year) %>% 
+  summarize(mean_weight = mean(weight, na.rm = TRUE))
+```
+```{r}
+group_by(surveys, species_id) %>% 
+  summarize(sp =n()) 
+group_by(surveys, year) %>% 
+  summarize(sp_year = n())
+group_by(surveys, year) %>% 
+  filter(species_id == "DO") %>% 
+  summarize(mm = mean(weight, na.rm = TRUE))
+```
+
+
+

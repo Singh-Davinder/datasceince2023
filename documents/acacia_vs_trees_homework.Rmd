@@ -9,6 +9,7 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 #install.packages("readr")
 library(readr)
+library(ggplot2)
 ```
 
 ```{r}
@@ -89,3 +90,22 @@ ggplot() +
   geom_line()
 ```
 
+```{r}
+ac <- read.csv(file = "../data-raw/ACACIA_DREPANOLOBIUM_SURVEY.txt", sep = "\t", na.strings = "dead")
+trees <- read_tsv(file ="../data-raw/TREE_SURVEYS.txt",
+               col_types = list(HEIGHT = col_double(),
+                                AXIS_2 = col_double()))
+```
+
+
+```{r}
+ggplot() +
+  geom_point(data = trees, mapping = aes(x = CIRC, y = HEIGHT), color = "gray", alpha = 0.5) +
+  geom_point(color = "gray") +
+  geom_point(data = ac, mapping = aes(x = CIRC, y = HEIGHT), color = "red", alpha = 0.6) +
+  scale_x_log10() +
+  scale_y_log10() +
+  geom_smooth(method = "lm") +
+  geom_smooth(data = ac, mapping = aes(x = CIRC, y = HEIGHT), method = "lm") +
+  geom_smooth(data = trees, mapping = aes(x = CIRC, y = HEIGHT), method = "lm")
+```
