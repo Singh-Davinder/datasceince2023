@@ -1,0 +1,36 @@
+---
+title: "shrub_volume"
+author: "Davinder Singh"
+date: "`2023-03-11`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(magrittr)
+```
+
+# excerise 8
+```{r}
+read.csv(file = "../data-raw/shrub-volume-data.csv") -> shrub_data #load the data using read.csv then file to set directery 
+#was getting an for line 23 "width is not an object in order to fix the error I assigned objects to the columns in order to make the mutate function work
+shrub_data[1] -> site # line 17 -21 assign object to columns
+shrub_data[2] -> experiment
+shrub_data[3] -> length 
+shrub_data[4] -> width 
+shrub_data[5] -> height 
+mutate(shrub_data,volume = length * width * height) %>%  # finding volume using l *w *h
+  #filter(site == "1" | experiment == "1" | site == "2" | experiment == "2" | site == "3" | experiment == "3" | site == "4") %>%  
+  group_by(site) %>%  # group site 
+  summarize(mean_volume1 = mean(volume)) # mean value for site
+mutate(shrub_data,volume = length * width * height) %>% # mutate again to start looking at experiment
+  group_by(experiment) %>%  #group experiment
+  summarize(mean_volume1 = mean(volume)) # mean for experiment
+str(shrub_data)
+```
+ 
+
+
+
+
