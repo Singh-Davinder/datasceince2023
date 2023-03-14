@@ -1,0 +1,123 @@
+---
+title: "joining-tables"
+author: "Davinder Singh"
+date: "2023-03-14"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+```
+
+Load the three data sets that we are going to join, survey.csv, speices.csv, plot.csv
+```{r}
+surveys <- read.csv(file = "../data-raw/surveys (1).csv")
+species <- read.csv(file = "../data-raw/species.csv" )
+plots <- read.csv(file = "../data-raw/plots.csv")
+```
+
+## Why do we need to combine or join dat tables
+
+homework: elaborate on this topic
+
+## How do we join data tables in R
+
+There is a group function '-join()' that allow us to combine two data tables using values on a shared column
+
+there has to be a shared column, and we need three main arguments to run these functions, two data tables and one column name
+
+The different function allow us to combine in a differnt ways.
+'inner_join'
+
+```{r results='hide'}
+inner_join(surveys, species, by = "species_id")
+```
+
+We can also run it using pipes:
+```{r results='hide'}
+surveys %>% 
+  inner_join(species, by = "species_id") -> joined_table
+```
+
+### How can we explore our combined/joined head table?
+
+We want to see differences between the two input tables to see difference in columns we can use 'head()'
+To see number of rows we can use 'str()'
+```{r}
+head(species)
+head(surveys)
+head(joined_table)
+str(species)
+str(surveys)
+str(joined_table)
+```
+
+what happened with the number of rows in joined_table vs surveys?
+
+It dropped the rows that did not have matching vlaues of species_id column
+
+## Excerise 1
+
+```{r}
+plots %>% 
+  inner_join(surveys, by = "plot_id") %>% 
+  filter(plot_type == "Control") %>% 
+  head()
+```
+
+## Automate joining tables and other things with 'intersect()' 
+
+Which species_id values are shared between the two data tabels
+```{r}
+intersect(surveys$species_id, species$species_id)
+```
+
+To find shared columnss we use 'colnames()' function
+## Excerise 2
+```{r}
+colnames(surveys)
+colnames(species)
+intersect(colnames(surveys), colnames(species))
+```
+```{r }
+colnames(plots)
+colnames(surveys)
+intersect(colnames(plots), colnames(surveys))
+plots %>% 
+  inner_join(surveys, by = "plot_id") %>% 
+  filter(plot_type == "Rodent Exclosure") %>% 
+  head()
+```
+
+## other join functions
+
+'left_join()' retains all values from the first table, drops unmatching from second
+
+'right_join()' drops values from the first table and retaining all values from second
+
+'full_join()' keeps all values from both tables
+
+## Joining multiple data tables
+can we '_join()' function on 3 or more table at same time?
+NO
+so we use a pipe on call the join function two or more times (as needed):
+```{r}
+inner_join(surveys, species, by = "species_id") %>% 
+  inner_join(plots, by = "plot_id") %>% 
+  str()
+  
+```
+## Excerise 3
+```{r}
+inner_join(surveys, species, by = "species_id") %>% 
+  inner_join(plots, by = "plot_id") %>% 
+  filter(plot_type == "Long-term Krat Exclosure" | plot_type == "Control") %>% 
+  filter(taxa == "Rodent") %>% 
+  filter(!is.na(weight)) %>% 
+  select(year, genus, species, weight, plot_type) %>% 
+  str()
+  
+```
+
+
