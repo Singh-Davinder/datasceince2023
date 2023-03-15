@@ -8,6 +8,7 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
+library(ggplot2)
 ```
 
 Load the three data sets that we are going to join, survey.csv, speices.csv, plot.csv
@@ -120,4 +121,74 @@ inner_join(surveys, species, by = "species_id") %>%
   
 ```
 
+## Excerise 4
+## help on 3, 5 and 6 and ex 5
+### Ex 4 p.1
+```{r}
+inner_join(surveys, species, by = "species_id") %>% 
+  select(year, month, day, species_id, weight) %>% 
+  filter(species_id == "DO") %>% 
+  head()
+```
+### problem 2
+Create a data frame with only data for species IDs "PP" and "PB" and for years starting in 1995, with the columns "year", "species_id", and "hindfoot_length", with no missing values for "hindfoot_length"
+```{r}
+inner_join(surveys, species, by = "species_id") %>% 
+  inner_join(plots, by = "plot_id") %>% 
+  select(year,species_id, hindfoot_length) %>% 
+  filter(year <= "1995", !is.na(hindfoot_length)) %>% 
+  filter(species_id == "PP" | species_id == "PB") %>% 
+  head()
+
+```
+### problem 3
+Create a data frame with the average "hindfoot_length" for each "species_id" in each "year" with no null values.
+```{r}
+surveys %>% 
+  filter(!is.na(hindfoot_length)) %>% 
+  group_by(year, species_id) %>% 
+  summarize( hindfoot_length = mean(hindfoot_length, na.rm = TRUE)) %>% 
+  head()
+```
+
+### excerise 4
+```{r}
+inner_join(surveys, species, by = "species_id") %>% 
+  inner_join(plots, by = "plot_id") %>% 
+  select(year, genus, species, weight, plot_type) %>%
+  filter(genus == "Dipodomys") %>% 
+  head()
+  
+```
+
+```{r}
+inner_join(surveys, species, by = "species_id") %>% 
+  inner_join(plots, by = "plot_id") %>% 
+  ggplot(mapping = aes(x = weight, y = hindfoot_length)) +
+  geom_point(mapping = aes(color = species_id)) +
+  scale_x_log10()
+```
+### excerise 6
+Make a histogram of weights with a separate subplot for each "species_id". Do not include species with no weights. Set the "scales" argument to "free_y" so that the y-axes can vary. Include good axis labels.
+?geom_histogram
+```{r}
+inner_join(surveys, species, by = "species_id") %>% 
+  inner_join(plots, by = "plot_id") %>% 
+  filter(!is.na(weight)) %>% 
+  ggplot() + 
+  geom_histogram(mapping = aes(x = weight, color = species_id)) +
+  facet_wrap(~species_id, scales = "free_y")
+```
+
+## Excerise 5
+?order
+The table should be sorted first by the species (so that each species is grouped together) and then by weight, with the largest weights at the top.
+```{r}
+inner_join(surveys, species, by = "species_id") %>% 
+  inner_join(plots, by = "plot_id") %>% 
+  select(month, day, year, species_id, weight, hindfoot_length) %>% 
+  filter(!is.na(weight)) %>% 
+  arrange(species_id, desc(weight)) %>% 
+  head()
+```
 
