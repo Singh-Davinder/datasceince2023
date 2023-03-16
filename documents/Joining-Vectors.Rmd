@@ -1,0 +1,122 @@
+---
+title: "Joining-Vectors"
+author: "Davinder Singh"
+date: "2023-03-16"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+```
+
+## What are vectors?
+
+they are unidemnsional matrices
+they can only hold one type of data, either numeric (integer or double),character, or logical(complex numbers)
+
+## What are data frames
+
+It is a two dimentisnoal matix: rows, and columns
+it can hold any type of data
+it can only hold different types of data in a certain way:
+only column can have different data types
+within a column, all rows must have same data type
+
+A data frame can also be defined as a collection of vectors (they can be of different or the same type) all of same length!
+
+```{r}
+surveys <- read.csv(file = "../data-raw/surveys (1).csv")
+str(surveys)
+```
+
+## creating vector
+```{r}
+c("luna", "avi", "Anita", "James", "Charles", "Damian", "Davinder") -> our_names
+str(our_names)
+1:7 # the colon operator creates a vector of numbers
+1:7 -> my_numbers
+-100:200
+```
+In how many steps or units does the colon operator increase? It increases in a step of 1.
+
+What do we do if I won to create a numeric sequence that increases in steps different than 1?
+?seq
+```{r}
+seq(-100, 200, by = 0.1) -> my_numbers
+str(my_numbers)
+```
+```{r}
+letters
+LETTERS
+```
+
+
+## Creating data frames from vectors
+
+the most general way to do this is with the function 'data.frame()':
+
+```{r error=TRUE}
+data.frame(names = our_names, numbers = my_numbers)
+```
+Rember: vectors must have the same length to be part of a data.frame!
+must be a multiple of vector
+
+```{r}
+data.frame(names = our_names, numbers = 1:7)
+```
+
+Even though we can't use vectors that are larger to create a data frame, we can use vector that or eshorter, and R will recycle the values
+
+```{r}
+data.frame(names = our_names, numbers =1)
+```
+R will recycle the value only if they are multiple of vector of names two times, so it is a multiple of 2.
+```{r}
+data.frame(names = rep(our_names, 2), numbers = c(2, 5.5))
+```
+?data.frame
+## Excerise 6
+```{r}
+length <- c(2.2, 2.1, 2.7, 3.0, 3.1, 2.5, 1.9, 1.1, 3.5, 2.9)
+width <- c(1.3, 2.2, 1.5, 4.5, 3.1, NA, 1.8, 0.5, 2.0, 2.7)
+height <- c(9.6, 7.6, 2.2, 1.5, 4.0, 3.0, 4.5, 2.3, 7.5, 3.2)
+data.frame(length, width, height, genus = "Taxus", species = "epithet baccata")
+```
+
+## Extracting/accessing values from vectors and data frames
+
+```{r}
+surveys <- read.csv(file = "../data-raw/surveys (1).csv")
+str(surveys)
+```
+One common way to extract or access vectors crom column in a data frame is the '$'
+```{r}
+surveys$record_id -> record_id
+```
+
+Another way is with the square brackets '[]'
+
+```{r}
+surveys[1:10, "hindfoot_length"]
+```
+
+If I want all the values from the rows of column hindfoot length:
+
+```{r}
+surveys[, "hindfoot_length"] -> hindfoot_length
+```
+
+Another way is using double square brackets
+```{r}
+surveys[["record_id"]] %>% 
+  head()
+```
+
+```{r}
+surveys$weight -> surveys_weight
+surveys[, "month"] -> surveys_month
+surveys[, "hindfoot_length"] 
+mean(hindfoot_length, na.rm = TRUE)
+```
+
