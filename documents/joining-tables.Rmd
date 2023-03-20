@@ -192,3 +192,36 @@ inner_join(surveys, species, by = "species_id") %>%
   head()
 ```
 
+## Homework Day 2 excerise 8
+Import the shrub volume sites data and then combine it with both the data on shrub volume data and the experiments data to produce a single data frame that contains all of the data.
+?inner_join
+```{r}
+experiment <- read.csv(file = "../data-raw/shrub-volume-experiments (1).csv")
+shrub_volume_data <- read.csv(file = "../data-raw/shrub-volume-data.csv")
+shrub_volume_site <- read.csv(file = "../data-raw/shrub-volume-sites.csv")
+inner_join(experiment, shrub_volume_data, by = "experiment") %>% 
+  inner_join(x = shrub_volume_site, y = ., by = "site") 
+```
+
+```{r}
+
+intersect(colnames(shrub_volume_data), colnames(experiment))
+intersect(colnames(shrub_volume_site), colnames(shrub_volume_data))
+
+```
+
+## excerise 10
+A vector of shrub lengths
+A vector of the volume of each of the shrubs
+A data frame with just the shrubID and height columns
+A data frame with the second row of the full data frame
+A data frame with the first 5 rows of the full data frame
+```{r}
+label <-read.csv(file = "../data-raw/shrub-dimensions-labeled.csv")
+label$length
+volume = label$length * label$width * label$height
+data.frame(label$shrubID, label$height )
+label[2,]
+label[c(1, 2, 3, 4, 5),]
+```
+
