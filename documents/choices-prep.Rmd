@@ -1,0 +1,99 @@
+---
+title: "choices-prep"
+author: "Davinder Singh"
+date: "2023-03-22"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+```
+
+## Introduction to conditional statements
+```{r}
+"aang" == "aang"
+"aang" == "kora" #checking  conditionalstatements 
+"aang" != "kora"
+"zuka" %in% c("aang", "toph", "katara")
+"zuka" %in% c("aang", "toph", "katara", "zuka")
+5 > 2 & 6 >= 10 #and if one is false comes out false
+5 > 2 | 6 >= 10 # or if one is true comes out true
+c(1,1,2,3,1) == 1
+site = c( 'a','b','c','d')
+state = c('FL', 'FL', 'GA', 'AL')
+state == 'FL '
+site[state == 'FL']
+site[c(TRUE, TRUE, FALSE, FALSE)]
+```
+
+## introduction to if statements in R
+```{r}
+#if(the conditional statement is TRUE){
+  #do something
+#}
+x = 4
+if(x >5){
+  x = x^2
+} # not a function everything in global environment
+veg_type = "tree"
+volume = 16.08
+if(veg_type == "tree"){
+  mass = 2.65 * volume^0.9
+} #if it wasn't tree it won't work 
+```
+
+## introduction to else if and else statements in R
+```{r}
+veg_type = "shrub"
+volume = 16.08
+if(veg_type == "tree"){
+  mass = 2.65 * volume^0.9
+} else if (veg_type == "grass"){ #else if would skip to this portion if veg_type didn't match condition
+  mass = 0.65 * volume^1.2
+} else{ #else if above conditons aren't correct
+  mass = NA
+}
+```
+
+## Using if/else if/else statements inside of functions in R
+```{r}
+est_mass = function(volume, veg_type){
+ if(veg_type == "tree"){
+  mass = 2.65 * volume^0.9
+} else if (veg_type == "grass"){ 
+  mass = 0.65 * volume^1.2
+} else{ 
+  mass = NA
+} 
+  return(mass)
+}
+est_mass(1.6, "tree")
+est_mass(1.6, "grass")
+est_mass(1.6, "shrub") #using function and assigning variable code can be used again
+```
+
+## Introduction to nested if statements in R
+```{r}
+est_mass = function(volume, veg_type, age){
+ if(veg_type == "tree"){
+   if (age < 5 ) { #when tree is being checked this line would be run to see if less than 5 line 81 would run if greater than 5 line 82 would run
+     mass = 1.6 * volume^0.8
+   } else{
+     mass = 2.65 * volume^0.9
+   }
+} else if (veg_type == "grass"){ 
+  mass = 0.65 * volume^1.2
+} else{ 
+  mass = NA
+} 
+  return(mass)
+}
+est_mass(1.6, "tree", 4)
+est_mass(1.6, "tree", 6)
+est_mass(1.6, "grass")
+est_mass(1.6, "shrub")
+```
+
+
+
