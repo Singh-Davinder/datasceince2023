@@ -1,0 +1,167 @@
+---
+title: "writing functions"
+author: "Davinder Singh"
+date: "2023-03-21"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+```
+## in class excerise
+```{r}
+get_mass_from_length_theropoda <- function(length){
+  mass <- 0.73 * length ^ 3.63
+  return(mass)
+}
+```
+
+```{r}
+get_mass_from_length_theropoda(16)
+```
+```{r}
+
+```
+
+
+## Use and modify function excerise
+```{r}
+get_mass_from_length_theropoda <- function(length = 16){
+  mass <- 16 * length ^ 3.63
+  return(mass)
+}
+```
+
+```{r}
+get_mass_from_length <- function(length){
+  mass <- a * length ^ b
+  return(mass)
+}
+```
+
+
+
+```{r}
+get_mass_from_length <- function(a, b, length){
+  mass <- a * length ^ b
+  return(mass)
+}
+get_mass_from_length(214.44, 1.46, 26)
+```
+
+
+
+## writing funcitons excerise
+```{r}
+ #convert_pounds_to_grams <- function(pounds = 1) {
+     #grams = 453.6 * pounds
+     #return(grams)
+# }
+#convert_pounds_to_grams() # object naming 
+ # {
+   #grams = 453.6 * pounds
+   #return(grams)
+  #} #setting fuction up
+# function(x) # function varaible
+```
+
+```{r}
+ convert_pounds_to_grams <- function(grams, pounds) {
+     pounds <- 3.75
+     grams = 453.6 * pounds
+     return(grams)
+ }
+convert_pounds_to_grams(453.6, 3.75)
+```
+
+
+
+
+
+
+## why do we use functions in programming?
+
+- we already use functions a lot. Basically everything we run in R is a function.
+-We already use functions a lot. Basically everything we run in R is a function.
+-Reduce the amount of code we write
+-No need to repeat code, so less chance of repeating errors  or introducing new errors by miss-typing code.
+- Helps with reproducibility: no need to repeat code allows others (and future self) to run code in a straightfoward way, with accuracy
+-Makes it easier to write modeular code that you can reuse for other projects
+- Makes it easier to run and remember it.
+- It allows to organize analysis by putting code intended to run something together in the same function.
+
+
+## Excerise 4
+```{r}
+convert_kg_to_pounds <- function(kg = 0.45){
+  pounds = 2.205 * kg
+  return(pounds)
+}
+convert_kg_to_pounds()
+```
+
+```{r}
+convert_kg_to_pounds(50)
+```
+
+```{r}
+get_mass_from_length(a = 10.95, b = 2.64, length = 12) %>% 
+  convert_kg_to_pounds() 
+
+```
+
+```{r}
+length_in_pounds <- function(length, a, b){
+  get_mass_from_length(a = a, b = b, length = length) %>% 
+  convert_kg_to_pounds() 
+}
+```
+
+```{r}
+length_in_pounds(33, 5.6, 6.7)
+```
+
+## excerise 5
+```{r}
+surveys <- read.csv(file = "../data-raw/surveys (1).csv")
+species <- read.csv(file = "../data-raw/species.csv" )
+plots <- read.csv(file = "../data-raw/plots.csv")
+intersect(colnames(surveys), colnames(species))
+```
+
+```{r}
+a = inner_join(surveys, species, by = "species_id")
+head(a)
+```
+
+```{r}
+my_function <- function(a, genus_name = "Dipodomys", species_name = "merriami") {
+  a %>% 
+  group_by(year) %>% 
+  filter(genus == genus_name | species == species_name) %>% 
+  summarize(count = n()) -> output
+  return(output) 
+}
+my_function(a = a)
+```
+
+
+
+```{r}
+my_function(a =a) %>% 
+  ggplot(mapping = aes(x = year, y = count)) +
+  geom_line(color = "blue") 
+```
+```{r}
+my_function(a = a, "Chaetodipus", "penicillatus") %>% 
+  ggplot(mapping = aes(x = year, y = count)) +
+  geom_point(size = 1, color = "blue" ) +
+  geom_line(size = 2, color = "blue") +
+  labs(x = "year", y = "Number of Individuals")
+```
+
+
+
+
