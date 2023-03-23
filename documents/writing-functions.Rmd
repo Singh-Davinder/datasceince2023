@@ -154,6 +154,7 @@ my_function(a =a) %>%
   ggplot(mapping = aes(x = year, y = count)) +
   geom_line(color = "blue") 
 ```
+
 ```{r}
 my_function(a = a, "Chaetodipus", "penicillatus") %>% 
   ggplot(mapping = aes(x = year, y = count)) +
