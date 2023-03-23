@@ -150,7 +150,7 @@ my_function(a = a)
 
 
 ```{r}
-my_function(a =a) %>% 
+my_function(a =a, "Dipodomys", "merriami ") %>% 
   ggplot(mapping = aes(x = year, y = count)) +
   geom_line(color = "blue") 
 ```
