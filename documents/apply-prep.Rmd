@@ -1,0 +1,106 @@
+---
+title: "apply-prep"
+author: "Davinder Singh"
+date: "2023-04-03"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(stringr)
+```
+
+# Introduction to repeating things in R
+```{r}
+estmass <- function(volume) {
+  mass <- 2.65 * volume ^0.9
+  return(mass)
+}
+#make a vector
+# apply or map functions
+#combining function using dplyr
+```
+
+# Using vectorized functions
+```{r}
+c(1,2,3) * 2
+volume = c(1.6, 5.6, 3.1)
+estmass(volume) #already vectorized
+str_to_sentence(c("dipodomys", "chartodipus")) #captilized
+genus <- c("dipodomys", "chaetodipus", "dipodomys")
+species <- c("ordil", "baileyi", "spectabilis")
+combine_genus_species <- function(genus, species) {
+  genus_cap <- str_to_sentence(genus)
+  genus_species <- paste(genus_cap, species)
+  return(genus_species)
+}
+combine_genus_species(genus, species)
+data <- data.frame(genus, species)
+combine_genus_species(data$genus, data$species)
+```
+# apply functions
+```{r}
+#estmass <- function(volume) {
+  #if (volume > 5){
+  #mass <- 2.65 * volume ^0.9
+  #} else {
+    #mass <- NA
+  #}
+  #return(mass)
+#}
+#volumes <- c(1.6, 5.6, 3.1)
+#estmass(volume) 
+#sapply(volumes, estmass) #adding l would give l and s gives vecetor
+```
+
+# mapply function
+```{r}
+estmass <- function(volume, veg_type){
+  if (veg_type == "tree"){
+    mass <- 2.65 * volume^0.9
+  } else {
+    mass <- NA
+  }
+  return(mass)
+}
+volumes <- c(1.6, 5.6, 3.1)
+veg_type <- c("shrub", "tree", "tree")
+mapply(FUN = estmass, volume = volumes, veg_type = veg_type) # multiple arguments
+```
+
+# combining functions with dplyr
+```{r}
+estmass <- function(volume, veg_type){
+  if (veg_type == "tree"){
+    mass <- 2.65 * volume^0.9
+  } else {
+    mass <- NA
+  }
+  return(mass)
+}
+estmassvectorized <- function(volume){
+  mass <- 2.65 * volume^0.9
+  return(mass)
+}
+volumes <- c(1.6, 5.6, 3.1)
+veg_type <- c("shrub", "tree", "tree")
+plant_data <- data.frame(volumes, veg_type)
+
+plant_data %>% #need to use vectorized data line 82
+  mutate(masses = estmassvectorized(volumes))
+plant_data %>%
+  rowwise() %>% 
+  mutate(masses = estmass(volumes, veg_type))
+getbiomass <- function(volumes){
+  masses <- estmassvectorized(volumes)
+  biomass <- sum(masses)
+  return(biomass)
+}
+getbiomass(volumes)
+#with dplyr
+plant_data %>% 
+  group_by(veg_type) %>% 
+  summarize(biomass = getbiomass(volumes))
+```
+
