@@ -1,0 +1,182 @@
+---
+title: "if-else conditions"
+author: "Davinder Singh"
+date: "2023-03-23"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+```
+
+## logical and conditional statements
+
+These are pieces of code that return the 'TRUE' or 'FALSE' values, that is, a logical value
+
+The common operators of lofical statementsa are:
+-equality '=='
+-inequality '!='
+-greater than '>'
+-less than '<'
+- greater or equal than '>='
+-less or equal than '<='
+
+The conditonal statements allow to test several logical conditions at a time
+The condition operators (or symbols) are
+-AND '&' (inside dplyr functin we can represent AND using a ',')
+-OR '|'
+
+We also have logical functions that test if something is 'TRUE' or 'FALSE', for example:
+-'is.na()' is a function that tests if a value is an 'NA'
+-This function i part of a whole family of functions, they also start with 'is.':
+-is.vector()
+-is.data.frame()
+-is.factor()
+
+For next class: how to get all functions from a family (method).
+
+-which() : takes logical vectors, it will give you the numerical index (position)
+of all values that are TRUE
+```{r}
+which(letters == "r")
+letters[18]
+```
+## excerise 6
+```{r}
+ w <- 10.2
+ x <- 1.3
+ y <- 2.8
+ z <- 17.5
+ colors <- c("red", "blue", "green")
+ masses <- c(45.2, 36.1, 27.8, 81.6, 42.4)
+ dna1 <- "attattaggaccaca"
+ dna2 <- "attattaggaacaca"
+
+```
+
+```{r}
+w > 10
+colors == "green"
+x > y
+masses > 40
+2^x + 0.2 == y
+dna1 == dna2
+dna1 != dna2
+w > x | y > z
+x * w < 13.5
+x * w > 13.2
+x * w < 13.5 & x * w > 13.2
+masses > 30 &  50
+masses > 30
+masses < 50
+masses < 50 & masses > 30
+```
+
+## How to make simple choices with 'if()'
+```
+if(condition is TRUE) {
+  Run all lines of code in this block of code
+}
+```
+If the condition is not TRUE, then nothing happens.
+
+## Excerise 7: Handling one choice
+```{r}
+ age_class = "sapling"
+ if (age_class == "sapling"){
+y <- 10
+ }
+ y
+```
+
+## Case when we have two options: if-else structure
+
+The general form of this structure:
+
+```
+if(condition){
+code that runs if condition is met
+} else{
+code that runs if condition is NOT met
+}
+```
+## Excerise 8 handling two choices
+```{r}
+ age_class = "seedling"
+ if (age_class == "sapling"){
+y <- 10
+ } else{
+   age_class == "seedling"
+   y <- 5
+ }
+ y
+```
+
+## handle more than 2 choices
+
+In this case we are using the elseif structure:
+```
+if(condition1){
+first block code that is execities if conditon 1 is met
+} else if(condition2){
+second block code taht excutes if condition2 is met
+} else if(conditon3){
+more code
+} else{
+this will cover all the conditoins that are not specified before
+}
+```
+
+you do not have to end up with and else block
+'Else if' are more intentional with the conditions
+A simple else will run in all other no matter what.
+
+## Exceris 9 handling 3 choices or more 
+```{r}
+ age_class = "adult"
+ if (age_class == "sapling"){
+y <- 10
+ } else if(age_class == "seedling"){
+   y <- 5
+ } else{
+   y <- 0
+ }
+ y
+```
+
+## Excerise 12 load or download file
+```{r}
+list.files()
+if (file.exists("surveys (1).csv")) {
+  print("file exists")
+} else{
+  print("file does not exist")
+}
+```
+?download.file
+```{r}
+if (file.exists("surveys.csv")) {
+  print("file exists")
+} else{
+  download.file("https://ndownloader.figshare.com/files/2292172", "surveys_test.csv")
+  read.csv("surveys_test.csv") %>% 
+  head() %>% 
+    print()
+  
+}
+```
+```{r}
+if (file.exists("species1.csv")) {
+  print("file exists")
+} else{
+  download.file("https://ndownloader.figshare.com/files/3299483", "species.csv")
+  read.csv("species.csv") %>% 
+  head() %>% 
+    print()
+  
+}
+```
+
+
+
