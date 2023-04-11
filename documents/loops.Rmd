@@ -172,31 +172,57 @@ mass_from_length <- function(length, species){
   if (species == "Stegosauria"){
     a = 10.95 
     b = 2.64
-    mass <- a * length^b
   } else if (species == "Theropoda"){
     a = 0.73 
     b = 3.63
-    mass <- a * length^b
+    
   } else if ( species == "Sauropoda"){
     a = 214.44 
     b = 1.46
-    mass <- a * length^b
+   
   } else {
                a = 25.37
                b = 2.49
-               mass <- a * length^b
+               
   }
-  return(mass)
+mass <- a * length^b
+return(mass)
+}
+
+
+```
+
+```{r}
+my_results <-vector(mode = "numeric", length = nrow(dinosaur_length))
+for (i in 1:nrow(dinosaur_length)){
+   mass_i <- mass_from_length(length = dinosaur_length$lengths[i], species = dinosaur_length$species[i])
+  #print(mass_i)
+  my_results[i] <- mass_i
   
 }
-
-
+head(my_results)
 ```
 
-```{r error=TRUE}
-for (i in 1:length(species)){
-   mass <- mass_from_length(species[i])
-   print(mass)
-}
+```{r}
+dinosaur_length$masses <- my_results
+head(dinosaur_length)
 ```
+```{r}
+dinosaur_length %>% 
+  group_by(species) %>% 
+  summarise(mean_mass = mean(masses))
+```
+
+## Excerise 7
+```{r}
+download.file(url = "http://www.datacarpentry.org/semester-biology/data/individual_collar_data.zip", destfile = "../data-raw/individual_collar_data.zip")
+```
+```{r}
+unzip("../data-raw/individual_collar_data.zip",exdir = "../data-raw/")
+```
+
+```{r}
+list.files(path = "../data-raw", pattern = "collar-data-.*.txt")
+```
+
 
