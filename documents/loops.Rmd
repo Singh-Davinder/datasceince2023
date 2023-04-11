@@ -193,8 +193,8 @@ mass_from_length <- function(length, species){
 
 ```
 
-```{r}
-for (i in 1:length()){
+```{r error=TRUE}
+for (i in 1:length(species)){
    mass <- mass_from_length(species[i])
    print(mass)
 }
