@@ -7,6 +7,7 @@ output: pdf_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
 ```
 
 For loops are another way we can tell a computer to repeat task for us. They are versatile and very explicit, so that means that we are are controlling everything that is run on each iteration of the loops (mostly).
@@ -160,7 +161,42 @@ for (i in 1:length(lengths)) {
 }
 areas
 ```
+## Excerise 6
+```{r}
+read.csv(file = "../data-raw/dinosaur_lengths (1).csv") -> dinosaur_length
+```
 
 
+```{r}
+mass_from_length <- function(length, species){
+  if (species == "Stegosauria"){
+    a = 10.95 
+    b = 2.64
+    mass <- a * length^b
+  } else if (species == "Theropoda"){
+    a = 0.73 
+    b = 3.63
+    mass <- a * length^b
+  } else if ( species == "Sauropoda"){
+    a = 214.44 
+    b = 1.46
+    mass <- a * length^b
+  } else {
+               a = 25.37
+               b = 2.49
+               mass <- a * length^b
+  }
+  return(mass)
+  
+}
 
+
+```
+
+```{r}
+for (i in 1:length()){
+   mass <- mass_from_length(species[i])
+   print(mass)
+}
+```
 
