@@ -8,6 +8,7 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
+library(ggplot2)
 ```
 
 For loops are another way we can tell a computer to repeat task for us. They are versatile and very explicit, so that means that we are are controlling everything that is run on each iteration of the loops (mostly).
@@ -223,6 +224,13 @@ unzip("../data-raw/individual_collar_data.zip",exdir = "../data-raw/")
 
 ```{r}
 list.files(path = "../data-raw", pattern = "collar-data-.*.txt")
+```
+
+```{r error=TRUE}
+for (list in collar-data){
+  ggplot(mapping = aes(x =long, y= lat)) +
+    geom_point(size = 5)
+}
 ```
 
 
