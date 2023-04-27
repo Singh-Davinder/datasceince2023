@@ -1,0 +1,123 @@
+---
+title: "Tree opentree"
+author: "Davinder Singh"
+date: "2023-04-20"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ape) #Analysis, Phylogentics and Evolution R package
+#install.packages("rotl")
+library(rotl) # an R interferface fpr open Tree of life
+library(remotes)
+library(datelife)
+```
+
+Insect - 1 million named species
+Mammals - 5k named species 
+Flowering plants - 200k named species
+### Read a newick tree from open tree of life
+
+```{r}
+tree <- read.tree(file = "../data-raw/subtree-node-mrcaott9245ott242638-Salamandroidea--Sirenoidea (1).tre")
+```
+```{r, fig.height= 20, fig.width= 15}
+plot(tree, cex = 0.2)
+mtext(text = "amphibian-environmental")
+```
+
+We can also use the url of a tree to read a tree into R. We will provide the URL in the argument 'file ='
+Tje is "http://ape-package.ird.fr/APER/APER2/primfive.tre":
+```{r}
+small_tree <- read.tree(file = "http://ape-package.ird.fr/APER/APER2/primfive.tre")
+small_tree
+```
+
+```{r}
+plot(small_tree, cex = 0.5)
+```
+The R structure of a phylogentic tree
+
+###Getting a tree for your species from the open tree of life
+
+The Open tree of life has tools that allow to match the name of a group or species to their unified taxononmy so that we can look for information
+
+If we are doing this in R, we are using the 'tnrs_match_names()' from the package 'rotl':
+```{r}
+tnrs <- tnrs_match_names(names = "Homo")
+class(tnrs)
+```
+
+What is the main difference between the information that the information that we have in the column 'search_string' and 'unique_name':
+One is the search string and the other is the scientific taxonomci make from the open tree of life unified taxononmy (OTT)
+
+We can use the unique number identifier from OTT to get information from that taxon.
+
+To get a tree we can use the function 'tol_subtree()'
+```{r}
+#tol_subtree(ott_id = tnrs$ott_id)
+```
+
+### Getting a tree for a set of taxa
+
+Sometimes we have a very large groups and we just want to get a small tree representing some lineages insdie the group
+
+For example, we want a tree of all orders in amphibians. we known the common names of these which are frogs, salamnders, cecilinas
+
+We want to find this lineages in the Open tree of life; the steps to do this are:
+1. Get the scientific names of our taxa
+```{r}
+c("anura","urodela","gymnophiona") -> amphibians_orders
+```
+
+```{r}
+tnrs_match_names(names = amphibians_orders) ->amph_order_tnrs
+amph_order_tnrs
+```
+We have two colums at the beginning, search string contains the names that we provided, and unique_name contains the most updated or offical or most commonly used taxonomic names for that we provided.
+
+3.Next step is to use the OTT ids that we got to extract the tree containing those lineages.
+If we have only one name or lineage, we can use 'tol_subtree()'
+If we have more than one names, we will use 'tol_induced_subtree()'
+
+```{r}
+tol_induced_subtree(ott_ids = amph_order_tnrs$ott_id) -> amp_order_tree
+amp_order_tree
+```
+```{r}
+plot.phylo(x = amp_order_tree)
+```
+
+### Getting a tree of all families
+
+Install an'datalife' R package from Github, with a function
+
+
+```{r}
+install_github(repo = "phylotastic/datelife", force = TRUE)
+
+```
+```{r}
+#install.packages("remotes")
+install.packages("datelife")
+```
+
+Now we can use the 'datalife' package, but we have to load it first
+```{r}
+amph <-tnrs_match_names(names = "Amphibians")
+tol_subtree(ott_id = amph$ott_id)
+get_ott_children(ott_ids = amph$ott_id, ott_rank = "family") -> amphibian_families
+amphibian_families
+```
+```{r}
+tol_induced_subtree(ott_ids = amphibian_families$Amphibia$ott_id)
+```
+
+
+we are going to use the fucntion that extracts all the names from a taxon that belong to a given named rank. The function is called 'get_ott_childern()':
+
+HW:
+1. extract the names of the taxa from your data set for the final project
+2. Match them OTT using TNRS with 'tnrs_match_names()'
+3. Use the OTT ids to get an induced subtree

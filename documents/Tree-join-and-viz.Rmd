@@ -1,0 +1,64 @@
+---
+title: "Tree join and viz"
+author: "Davinder Singh"
+date: "2023-04-27"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(BiocManager)
+library(ggtree)
+library(ape)
+library(dplyr)
+```
+
+## The package 'ggtree'
+
+There are a couple of databases for hosting biological software in R, the most famous one is CRAN, but another very reliable one is BioConductor
+
+When we are installing package from CRAN, we use the function install.package(). To install packages from Bioconductor we use a function from an R package that is called 'BiocManger'
+
+install.packages("BiocManager")
+
+Once that this pacakge is installed, we can use one of its functions that is called 'install()' to install packages from Bioconductor directly: 'install("ggtree")'
+```{r}
+portal_tree <- read.tree(file = "../data-raw/portal-tree.tre")
+```
+
+```{r}
+ggtree(portal_tree)
+```
+```{r fig.height= 10, fig.width = 8}
+plot.phylo(portal_tree, cex = 0.5)
+```
+### The structure of a tree in R 
+
+We have an object that we named 'portal_tree', how do we explore its structure? The 'str()' function is a great option
+What is the calss and length of this object
+```{r}
+str(portal_tree)
+```
+
+```{r}
+class(portal_tree)
+```
+
+How would you define a 'phylo'
+```{r}
+taxonomy <- read.csv(file = "../data-raw/portal-species-taxonomy.csv")
+head(taxonomy)
+```
+```{r}
+surveys <- read.csv(file = "../data-raw/surveys (1).csv")
+species <- read.csv(file = "../data-raw/species.csv")
+intersect(colnames(surveys), colnames(species))
+joined <- inner_join(surveys, species, by = "species_id")
+
+```
+
+```{r}
+left_join(portal_tree)
+```
+
+
