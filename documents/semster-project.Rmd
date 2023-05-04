@@ -1,0 +1,141 @@
+---
+title: "semster-project"
+author: "Davinder Singh"
+date: "2023-04-16"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(ape)
+library(rotl)
+library(remotes)
+library(datelife)
+```
+
+```{r}
+read.csv(file = "../data-raw/IUCN Red List Changes - 2002 to 2022 - Single Measure.csv") -> Single_Measure
+read.csv(file = "../data-raw/IUCN Red List Changes - 2002 to 2022 - Multiple Measures.csv") -> Multiple_Measure
+```
+
+```{r}
+Single_Measure %>% 
+  filter(Class == "Amphibians" | Class == "	
+Birds" | Class == "Fishes" | Class == "Fungi & Protists") %>% 
+  group_by(Class, Metric)
+```
+```{r}
+#as.integer(Single_Measure$Number.of.Species)
+Single_Measure %>% 
+  group_by(Metric) %>%
+  mutate(Species = as.integer(Number.of.Species)) %>% 
+  filter(!is.na(Species)) %>% 
+ggplot(mapping = aes(x = Year, y = Species, color = Metric)) +
+  geom_point(size = 0.5) +
+  facet_wrap(~Class, scales = "free_y")
+str(Single_Measure)
+```
+```{r}
+Single_Measure %>% 
+  filter(Class == "amphibians" | Class == "Mammals" | Class == "Fungi & Protists" | Class == "Mollus" | Class == "Reptiles" | Class == "Plants" | Class == "Other Invertebrates") %>% 
+  group_by(Metric) %>% 
+  mutate(Species = as.integer(Number.of.Species)) %>% 
+  filter(!is.na(Species)) %>% 
+  ggplot(mapping = aes(x = Year, y = Species, color = Metric)) +
+  geom_point(size = 1) +
+  facet_wrap(~Class, scales = "free_y")
+```
+```{r}
+intersect(colnames(Single_Measure), colnames(Multiple_Measure))
+```
+```{r}
+inner_join(Single_Measure, Multiple_Measure, by = "Year") %>% 
+  filter(Year == "2018")
+```
+```{r}
+inner_join(Single_Measure, Multiple_Measure, by = "Year") %>% 
+  select(Year, Class, Metric, Number.of.Species) %>% 
+  group_by(Metric) %>% 
+  mutate(Species = as.integer(Number.of.Species)) %>% 
+  filter(!is.na(Species)) %>% 
+  ggplot() +
+  geom_line(mapping = aes(x = Year, y = Species, color = Metric)) +
+  facet_wrap(~Class, scales = "free_y")
+```
+
+```{r}
+Multiple_Measure %>%
+  rowwise() %>% 
+  mutate(endangered = Mammal.Species.Critically.Endangered * Other.Invertebrate.Species.Critically.Endangered) %>% 
+  summarize(mean_endangered = mean(endangered))
+```
+```{r}
+#assessed <- function(mass_assessed){
+  #if (Year <= 2012){
+    #Chordata <- mean(Mammal.Species.Assessed * Bird.Species.Assessed)
+    #Amphibia <- mean(Amphibian.Species.Assessed * fish.Species.Assessed)
+    #plants <- mean(Plant.Species.Assessed * Fungus...Protist.Species.Assessed)
+    #Other <- mean(Reptile.Species.Assessed * Insect.Species.Assessed * Mollusc.Species.Assessed * Other.Inveretebrate.Species.Assessed)
+#   } else (Year >= 2012){
+#      Chordata <- mean(Mammal.Species.Assessed * Bird.Species.Assessed)
+#     Amphibia <- mean(Amphibian.Species.Assessed * fish.Species.Assessed)
+#     plants <- mean(Plant.Species.Assessed * Fungus...Protist.Species.Assessed)
+#     Other <- mean(Reptile.Species.Assessed * Insect.Species.Assessed * Mollusc.Species.Assessed * Other.Inveretebrate.Species.Assessed)
+#   }
+#   return(mass_assessed)
+# }
+```
+
+```{r}
+#SM_tree <- tnrs_match_names(names = "Amphibians")
+#tol_subtree(ott_id = SM_tree$ott_id) -> amphibian_tree
+#SM_tree
+```
+```{r}
+#str(amphibian_tree)
+#class(amphibian_tree)
+#class(SM_tree)
+#Ntip(amphibian_tree)
+```
+```{r fig.height= 15, fig.width= 10}
+#plot.phylo(x = amphibian_tree, cex = 2)
+```
+
+
+
+```{r}
+MM_tree <- tnrs_match_names(names = "Mollusc")
+tol_subtree(ott_id = MM_tree$ott_id)
+MM_tree
+```
+
+```{r}
+Single_Measure %>% 
+  mutate(Species = as.integer(Number.of.Species)) %>% 
+  group_by(Year, Class) %>%
+  filter(!is.na(Species)) %>% 
+  filter(Class == "Birds") %>% 
+  summarize(bird_mean = mean(Species))
+```
+
+```{r}
+c("Mammal", "Fungi", "insects", "Amphibians", "Protist", "Molluscs", "Plants") -> SM_tree_Class
+tnrs_match_names(names = SM_tree_Class) ->SM_tree_order_tnrs
+SM_tree_order_tnrs
+```
+```{r}
+tol_induced_subtree(ott_ids = SM_tree_order_tnrs$ott_id) -> SM_order_tree
+SM_order_tree
+```
+
+```{r}
+plot.phylo(x = SM_order_tree)
+```
+
+
+
+
+
+

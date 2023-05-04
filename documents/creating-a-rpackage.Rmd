@@ -1,0 +1,76 @@
+---
+title: "creating an R data package"
+author: "Davinder Singh"
+date: "2023-04-27"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## creating a new repository locally as an R package
+
+With Rstudio
+1. Use option to create a new project
+2. Choose create an R package
+3.Choose create an R package
+4. Give a name to the package
+5. Click on create in new session
+
+Once we have a backbone for an R package, start customizing it 
+- Modifying the descrption file
+- This files contains the metadata of the package
+Metadata is "data about data", it contains the information
+licenese GPL (>=2) is the most common for data package
+Say something about the particularities 
+
+### Add a readME file
+
+Use a new package that is called 'usethis'
+```{r eval=FALSE}
+#install.packages("usethis")
+library(usethis)
+```
+```{r}
+use_readme_md()
+```
+### Adding data to the package
+
+We are going to use the function 'use_data_raw()', this creates a folder called 'data-raw/' with an R script tht will document the creation of the data object that will be stored in our package.
+
+In this R script called 'DATASET.R' we will document the steps to read the raw data which is in CSV format and save it in R format
+This is useful so that the dataset are always available when someone installs an R package.
+
+### Documenting the data (and functions)
+
+Help for a function or data set can be accessed with the question mark '?', or the function 'help()'
+But where are these documentation files created?
+
+There is a special folder called 'man/' in every R package that stores files of type '.Rd', shortcut for 'Rdocument.'
+To render from markdown in R script to .Rd in the man folder, we use the function 'document()' from the package devtools:
+```{r eval=FALSE}
+#install.packages("devtools")
+library(devtools)
+document() #run this line in the repo of your R package
+```
+## Building a website for an R package
+
+We will use the 'pkgdown' package.
+We first activate the use of pkgdown in our repository with use 'use_pkgdown()' from package 'usethis'
+```{r}
+library(pkgdown)
+build_site()
+```
+
+## Customize the website
+
+## Adding vignettes to our package
+
+Vignettes are Rmd files that have information on how to use the package.
+To create a new one from scatch we use the function 'use_vignette()' from the package 'usethis'
+```{r eval=FALSE}
+library(usethis)
+use_vignette(name = "intro")
+```
+

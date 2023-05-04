@@ -1,0 +1,1001 @@
+﻿Year,Class,Metric,Number of Species
+2002,Amphibians,Critically Endangered,30
+2003,Amphibians,Critically Endangered,30
+2004,Amphibians,Critically Endangered,413
+2006,Amphibians,Critically Endangered,442
+2007,Amphibians,Critically Endangered,441
+2008,Amphibians,Critically Endangered,475
+2009,Amphibians,Critically Endangered,484
+2010,Amphibians,Critically Endangered,486
+2011,Amphibians,Critically Endangered,498
+2012,Amphibians,Critically Endangered,509
+2013,Amphibians,Critically Endangered,520
+2014,Amphibians,Critically Endangered,518
+2015,Amphibians,Critically Endangered,528
+2016,Amphibians,Critically Endangered,546
+2017,Amphibians,Critically Endangered,552
+2018,Amphibians,Critically Endangered,550
+2019,Amphibians,Critically Endangered,588
+2020,Amphibians,Critically Endangered,650
+2021,Amphibians,Critically Endangered,673
+2022,Amphibians,Critically Endangered,681
+2002,Amphibians,Endangered,37
+2003,Amphibians,Endangered,37
+2004,Amphibians,Endangered,729
+2006,Amphibians,Endangered,738
+2007,Amphibians,Endangered,737
+2008,Amphibians,Endangered,755
+2009,Amphibians,Endangered,754
+2010,Amphibians,Endangered,758
+2011,Amphibians,Endangered,764
+2012,Amphibians,Endangered,767
+2013,Amphibians,Endangered,783
+2014,Amphibians,Endangered,789
+2015,Amphibians,Endangered,810
+2016,Amphibians,Endangered,852
+2017,Amphibians,Endangered,869
+2018,Amphibians,Endangered,903
+2019,Amphibians,Endangered,964
+2020,Amphibians,Endangered,1036
+2021,Amphibians,Endangered,1085
+2022,Amphibians,Endangered,1103
+2002,Amphibians,Total Assessed,263
+2003,Amphibians,Total Assessed,401
+2004,Amphibians,Total Assessed,"5,743"
+2006,Amphibians,Total Assessed,"5,918"
+2007,Amphibians,Total Assessed,"5,915"
+2008,Amphibians,Total Assessed,"6,260"
+2009,Amphibians,Total Assessed,"6,285"
+2010,Amphibians,Total Assessed,"6,296"
+2011,Amphibians,Total Assessed,"6,338"
+2012,Amphibians,Total Assessed,"6,374"
+2013,Amphibians,Total Assessed,"6,409"
+2014,Amphibians,Total Assessed,"6,414"
+2015,Amphibians,Total Assessed,"6,460"
+2016,Amphibians,Total Assessed,"6,534"
+2017,Amphibians,Total Assessed,"6,609"
+2018,Amphibians,Total Assessed,"6,722"
+2019,Amphibians,Total Assessed,"6,794"
+2020,Amphibians,Total Assessed,"7,212"
+2021,Amphibians,Total Assessed,"7,296"
+2022,Amphibians,Total Assessed,"7,316"
+2002,Amphibians,Total Threatened,157
+2003,Amphibians,Total Threatened,157
+2004,Amphibians,Total Threatened,1770
+2006,Amphibians,Total Threatened,1811
+2007,Amphibians,Total Threatened,1808
+2008,Amphibians,Total Threatened,1905
+2009,Amphibians,Total Threatened,1895
+2010,Amphibians,Total Threatened,1898
+2011,Amphibians,Total Threatened,1917
+2012,Amphibians,Total Threatened,1933
+2013,Amphibians,Total Threatened,1950
+2014,Amphibians,Total Threatened,1957
+2015,Amphibians,Total Threatened,1994
+2016,Amphibians,Total Threatened,2068
+2017,Amphibians,Total Threatened,2100
+2018,Amphibians,Total Threatened,2092
+2019,Amphibians,Total Threatened,2200
+2020,Amphibians,Total Threatened,2390
+2021,Amphibians,Total Threatened,2488
+2022,Amphibians,Total Threatened,2515
+2002,Amphibians,Vulnerable,90
+2003,Amphibians,Vulnerable,90
+2004,Amphibians,Vulnerable,628
+2006,Amphibians,Vulnerable,631
+2007,Amphibians,Vulnerable,630
+2008,Amphibians,Vulnerable,675
+2009,Amphibians,Vulnerable,657
+2010,Amphibians,Vulnerable,654
+2011,Amphibians,Vulnerable,655
+2012,Amphibians,Vulnerable,657
+2013,Amphibians,Vulnerable,647
+2014,Amphibians,Vulnerable,650
+2015,Amphibians,Vulnerable,656
+2016,Amphibians,Vulnerable,670
+2017,Amphibians,Vulnerable,679
+2018,Amphibians,Vulnerable,639
+2019,Amphibians,Vulnerable,648
+2020,Amphibians,Vulnerable,704
+2021,Amphibians,Vulnerable,730
+2022,Amphibians,Vulnerable,731
+2002,Birds,Critically Endangered,182
+2003,Birds,Critically Endangered,182
+2004,Birds,Critically Endangered,179
+2006,Birds,Critically Endangered,181
+2007,Birds,Critically Endangered,189
+2008,Birds,Critically Endangered,190
+2009,Birds,Critically Endangered,192
+2010,Birds,Critically Endangered,190
+2011,Birds,Critically Endangered,189
+2012,Birds,Critically Endangered,197
+2013,Birds,Critically Endangered,198
+2014,Birds,Critically Endangered,213
+2015,Birds,Critically Endangered,218
+2016,Birds,Critically Endangered,225
+2017,Birds,Critically Endangered,222
+2018,Birds,Critically Endangered,224
+2019,Birds,Critically Endangered,225
+2020,Birds,Critically Endangered,223
+2021,Birds,Critically Endangered,225
+2022,Birds,Critically Endangered,231
+2002,Birds,Endangered,326
+2003,Birds,Endangered,331
+2004,Birds,Endangered,345
+2006,Birds,Endangered,351
+2007,Birds,Endangered,356
+2008,Birds,Endangered,361
+2009,Birds,Endangered,362
+2010,Birds,Endangered,372
+2011,Birds,Endangered,382
+2012,Birds,Endangered,389
+2013,Birds,Endangered,397
+2014,Birds,Endangered,419
+2015,Birds,Endangered,416
+2016,Birds,Endangered,448
+2017,Birds,Endangered,461
+2018,Birds,Endangered,469
+2019,Birds,Endangered,461
+2020,Birds,Endangered,460
+2021,Birds,Endangered,447
+2022,Birds,Endangered,423
+2002,Birds,Total Assessed,"2,138"
+2003,Birds,Total Assessed,"2,139"
+2004,Birds,Total Assessed,"9,917"
+2006,Birds,Total Assessed,"9,934"
+2007,Birds,Total Assessed,"9,956"
+2008,Birds,Total Assessed,"9,990"
+2009,Birds,Total Assessed,"9,998"
+2010,Birds,Total Assessed,"10,027"
+2011,Birds,Total Assessed,"10,052"
+2012,Birds,Total Assessed,"10,064"
+2013,Birds,Total Assessed,"10,065"
+2014,Birds,Total Assessed,"10,425"
+2015,Birds,Total Assessed,"10,424"
+2016,Birds,Total Assessed,"11,121"
+2017,Birds,Total Assessed,"11,122"
+2018,Birds,Total Assessed,"11,126"
+2019,Birds,Total Assessed,"11,147"
+2020,Birds,Total Assessed,"11,158"
+2021,Birds,Total Assessed,"11,162"
+2022,Birds,Total Assessed,"11,162"
+2002,Birds,Total Threatened,1192
+2003,Birds,Total Threatened,1194
+2004,Birds,Total Threatened,1212
+2006,Birds,Total Threatened,1206
+2007,Birds,Total Threatened,1217
+2008,Birds,Total Threatened,1222
+2009,Birds,Total Threatened,1223
+2010,Birds,Total Threatened,1240
+2011,Birds,Total Threatened,1253
+2012,Birds,Total Threatened,1313
+2013,Birds,Total Threatened,1308
+2014,Birds,Total Threatened,1373
+2015,Birds,Total Threatened,1375
+2016,Birds,Total Threatened,1460
+2017,Birds,Total Threatened,1469
+2018,Birds,Total Threatened,1492
+2019,Birds,Total Threatened,1486
+2020,Birds,Total Threatened,1481
+2021,Birds,Total Threatened,1445
+2022,Birds,Total Threatened,1409
+2002,Birds,Vulnerable,684
+2003,Birds,Vulnerable,681
+2004,Birds,Vulnerable,688
+2006,Birds,Vulnerable,674
+2007,Birds,Vulnerable,672
+2008,Birds,Vulnerable,671
+2009,Birds,Vulnerable,669
+2010,Birds,Vulnerable,678
+2011,Birds,Vulnerable,682
+2012,Birds,Vulnerable,727
+2013,Birds,Vulnerable,713
+2014,Birds,Vulnerable,741
+2015,Birds,Vulnerable,741
+2016,Birds,Vulnerable,787
+2017,Birds,Vulnerable,786
+2018,Birds,Vulnerable,799
+2019,Birds,Vulnerable,800
+2020,Birds,Vulnerable,798
+2021,Birds,Vulnerable,773
+2022,Birds,Vulnerable,755
+2002,Fishes,Critically Endangered,157
+2003,Fishes,Critically Endangered,162
+2004,Fishes,Critically Endangered,171
+2006,Fishes,Critically Endangered,253
+2007,Fishes,Critically Endangered,254
+2008,Fishes,Critically Endangered,289
+2009,Fishes,Critically Endangered,306
+2010,Fishes,Critically Endangered,376
+2011,Fishes,Critically Endangered,414
+2012,Fishes,Critically Endangered,415
+2013,Fishes,Critically Endangered,413
+2014,Fishes,Critically Endangered,443
+2015,Fishes,Critically Endangered,446
+2016,Fishes,Critically Endangered,461
+2017,Fishes,Critically Endangered,468
+2018,Fishes,Critically Endangered,486
+2019,Fishes,Critically Endangered,592
+2020,Fishes,Critically Endangered,666
+2021,Fishes,Critically Endangered,739
+2022,Fishes,Critically Endangered,800
+2002,Fishes,Endangered,143
+2003,Fishes,Endangered,144
+2004,Fishes,Endangered,160
+2006,Fishes,Endangered,237
+2007,Fishes,Endangered,254
+2008,Fishes,Endangered,269
+2009,Fishes,Endangered,298
+2010,Fishes,Endangered,400
+2011,Fishes,Endangered,477
+2012,Fishes,Endangered,494
+2013,Fishes,Endangered,530
+2014,Fishes,Endangered,587
+2015,Fishes,Endangered,614
+2016,Fishes,Endangered,660
+2017,Fishes,Endangered,676
+2018,Fishes,Endangered,674
+2019,Fishes,Endangered,868
+2020,Fishes,Endangered,1036
+2021,Fishes,Endangered,1139
+2022,Fishes,Endangered,1215
+2002,Fishes,Total Assessed,"1,265"
+2003,Fishes,Total Assessed,"1,532"
+2004,Fishes,Total Assessed,"1,721"
+2006,Fishes,Total Assessed,"2,912"
+2007,Fishes,Total Assessed,"3,119"
+2008,Fishes,Total Assessed,"3,481"
+2009,Fishes,Total Assessed,"4,443"
+2010,Fishes,Total Assessed,"8,848"
+2011,Fishes,Total Assessed,"9,554"
+2012,Fishes,Total Assessed,"10,590"
+2013,Fishes,Total Assessed,"11,172"
+2014,Fishes,Total Assessed,"12,457"
+2015,Fishes,Total Assessed,"14,462"
+2016,Fishes,Total Assessed,"16,134"
+2017,Fishes,Total Assessed,"16,409"
+2018,Fishes,Total Assessed,"16,803"
+2019,Fishes,Total Assessed,"19,199"
+2020,Fishes,Total Assessed,"22,005"
+2021,Fishes,Total Assessed,"22,581"
+2022,Fishes,Total Assessed,"24,356"
+2002,Fishes,Total Threatened,742
+2003,Fishes,Total Threatened,750
+2004,Fishes,Total Threatened,801
+2006,Fishes,Total Threatened,1171
+2007,Fishes,Total Threatened,1201
+2008,Fishes,Total Threatened,1275
+2009,Fishes,Total Threatened,1414
+2010,Fishes,Total Threatened,1851
+2011,Fishes,Total Threatened,2028
+2012,Fishes,Total Threatened,2058
+2013,Fishes,Total Threatened,2110
+2014,Fishes,Total Threatened,2222
+2015,Fishes,Total Threatened,2271
+2016,Fishes,Total Threatened,2359
+2017,Fishes,Total Threatened,2386
+2018,Fishes,Total Threatened,2332
+2019,Fishes,Total Threatened,2674
+2020,Fishes,Total Threatened,3040
+2021,Fishes,Total Threatened,3332
+2022,Fishes,Total Threatened,3548
+2002,Fishes,Vulnerable,442
+2003,Fishes,Vulnerable,444
+2004,Fishes,Vulnerable,470
+2006,Fishes,Vulnerable,681
+2007,Fishes,Vulnerable,693
+2008,Fishes,Vulnerable,717
+2009,Fishes,Vulnerable,810
+2010,Fishes,Vulnerable,1075
+2011,Fishes,Vulnerable,1137
+2012,Fishes,Vulnerable,1149
+2013,Fishes,Vulnerable,1167
+2014,Fishes,Vulnerable,1192
+2015,Fishes,Vulnerable,1211
+2016,Fishes,Vulnerable,1238
+2017,Fishes,Vulnerable,1242
+2018,Fishes,Vulnerable,1172
+2019,Fishes,Vulnerable,1214
+2020,Fishes,Vulnerable,1338
+2021,Fishes,Vulnerable,1454
+2022,Fishes,Vulnerable,1533
+2002,Fungi & Protists,Critically Endangered,0
+2003,Fungi & Protists,Critically Endangered,1
+2004,Fungi & Protists,Critically Endangered,1
+2006,Fungi & Protists,Critically Endangered,2
+2007,Fungi & Protists,Critically Endangered,2
+2008,Fungi & Protists,Critically Endangered,2
+2009,Fungi & Protists,Critically Endangered,2
+2010,Fungi & Protists,Critically Endangered,2
+2011,Fungi & Protists,Critically Endangered,2
+2012,Fungi & Protists,Critically Endangered,2
+2013,Fungi & Protists,Critically Endangered,2
+2014,Fungi & Protists,Critically Endangered,2
+2015,Fungi & Protists,Critically Endangered,5
+2016,Fungi & Protists,Critically Endangered,8
+2017,Fungi & Protists,Critically Endangered,10
+2018,Fungi & Protists,Critically Endangered,14
+2019,Fungi & Protists,Critically Endangered,19
+2020,Fungi & Protists,Critically Endangered,30
+2021,Fungi & Protists,Critically Endangered,32
+2022,Fungi & Protists,Critically Endangered,36
+2002,Fungi & Protists,Endangered,0
+2003,Fungi & Protists,Endangered,1
+2004,Fungi & Protists,Endangered,1
+2006,Fungi & Protists,Endangered,1
+2007,Fungi & Protists,Endangered,1
+2008,Fungi & Protists,Endangered,1
+2009,Fungi & Protists,Endangered,1
+2010,Fungi & Protists,Endangered,1
+2011,Fungi & Protists,Endangered,1
+2012,Fungi & Protists,Endangered,1
+2013,Fungi & Protists,Endangered,1
+2014,Fungi & Protists,Endangered,1
+2015,Fungi & Protists,Endangered,11
+2016,Fungi & Protists,Endangered,12
+2017,Fungi & Protists,Endangered,18
+2018,Fungi & Protists,Endangered,21
+2019,Fungi & Protists,Endangered,60
+2020,Fungi & Protists,Endangered,82
+2021,Fungi & Protists,Endangered,96
+2022,Fungi & Protists,Endangered,102
+2002,Fungi & Protists,Total Assessed,0
+2003,Fungi & Protists,Total Assessed,2
+2004,Fungi & Protists,Total Assessed,2
+2006,Fungi & Protists,Total Assessed,3
+2007,Fungi & Protists,Total Assessed,18
+2008,Fungi & Protists,Total Assessed,18
+2009,Fungi & Protists,Total Assessed,18
+2010,Fungi & Protists,Total Assessed,18
+2011,Fungi & Protists,Total Assessed,18
+2012,Fungi & Protists,Total Assessed,18
+2013,Fungi & Protists,Total Assessed,18
+2014,Fungi & Protists,Total Assessed,20
+2015,Fungi & Protists,Total Assessed,49
+2016,Fungi & Protists,Total Assessed,48
+2017,Fungi & Protists,Total Assessed,71
+2018,Fungi & Protists,Total Assessed,81
+2019,Fungi & Protists,Total Assessed,295
+2020,Fungi & Protists,Total Assessed,423
+2021,Fungi & Protists,Total Assessed,565
+2022,Fungi & Protists,Total Assessed,612
+2002,Fungi & Protists,Total Threatened,0
+2003,Fungi & Protists,Total Threatened,2
+2004,Fungi & Protists,Total Threatened,2
+2006,Fungi & Protists,Total Threatened,3
+2007,Fungi & Protists,Total Threatened,3
+2008,Fungi & Protists,Total Threatened,3
+2009,Fungi & Protists,Total Threatened,3
+2010,Fungi & Protists,Total Threatened,3
+2011,Fungi & Protists,Total Threatened,3
+2012,Fungi & Protists,Total Threatened,3
+2013,Fungi & Protists,Total Threatened,3
+2014,Fungi & Protists,Total Threatened,3
+2015,Fungi & Protists,Total Threatened,29
+2016,Fungi & Protists,Total Threatened,34
+2017,Fungi & Protists,Total Threatened,49
+2018,Fungi & Protists,Total Threatened,59
+2019,Fungi & Protists,Total Threatened,170
+2020,Fungi & Protists,Total Threatened,239
+2021,Fungi & Protists,Total Threatened,270
+2022,Fungi & Protists,Total Threatened,290
+2002,Fungi & Protists,Vulnerable,0
+2003,Fungi & Protists,Vulnerable,0
+2004,Fungi & Protists,Vulnerable,0
+2006,Fungi & Protists,Vulnerable,0
+2007,Fungi & Protists,Vulnerable,0
+2008,Fungi & Protists,Vulnerable,0
+2009,Fungi & Protists,Vulnerable,0
+2010,Fungi & Protists,Vulnerable,0
+2011,Fungi & Protists,Vulnerable,0
+2012,Fungi & Protists,Vulnerable,0
+2013,Fungi & Protists,Vulnerable,0
+2014,Fungi & Protists,Vulnerable,0
+2015,Fungi & Protists,Vulnerable,13
+2016,Fungi & Protists,Vulnerable,14
+2017,Fungi & Protists,Vulnerable,21
+2018,Fungi & Protists,Vulnerable,24
+2019,Fungi & Protists,Vulnerable,91
+2020,Fungi & Protists,Vulnerable,127
+2021,Fungi & Protists,Vulnerable,142
+2022,Fungi & Protists,Vulnerable,152
+2002,Insects,Critically Endangered,46
+2003,Insects,Critically Endangered,46
+2004,Insects,Critically Endangered,47
+2006,Insects,Critically Endangered,68
+2007,Insects,Critically Endangered,69
+2008,Insects,Critically Endangered,70
+2009,Insects,Critically Endangered,89
+2010,Insects,Critically Endangered,89
+2011,Insects,Critically Endangered,91
+2012,Insects,Critically Endangered,119
+2013,Insects,Critically Endangered,125
+2014,Insects,Critically Endangered,168
+2015,Insects,Critically Endangered,176
+2016,Insects,Critically Endangered,226
+2017,Insects,Critically Endangered,273
+2018,Insects,Critically Endangered,300
+2019,Insects,Critically Endangered,311
+2020,Insects,Critically Endangered,347
+2021,Insects,Critically Endangered,408
+2022,Insects,Critically Endangered,412
+2002,Insects,Endangered,118
+2003,Insects,Endangered,118
+2004,Insects,Endangered,120
+2006,Insects,Endangered,129
+2007,Insects,Endangered,129
+2008,Insects,Endangered,132
+2009,Insects,Endangered,151
+2010,Insects,Endangered,166
+2011,Insects,Endangered,169
+2012,Insects,Endangered,207
+2013,Insects,Endangered,247
+2014,Insects,Endangered,270
+2015,Insects,Endangered,305
+2016,Insects,Endangered,408
+2017,Insects,Endangered,461
+2018,Insects,Endangered,537
+2019,Insects,Endangered,571
+2020,Insects,Endangered,690
+2021,Insects,Endangered,937
+2022,Insects,Endangered,949
+2002,Insects,Total Assessed,747
+2003,Insects,Total Assessed,768
+2004,Insects,Total Assessed,771
+2006,Insects,Total Assessed,"1,192"
+2007,Insects,Total Assessed,"1,255"
+2008,Insects,Total Assessed,"1,259"
+2009,Insects,Total Assessed,"2,619"
+2010,Insects,Total Assessed,"3,269"
+2011,Insects,Total Assessed,"3,844"
+2012,Insects,Total Assessed,"4,003"
+2013,Insects,Total Assessed,"4,610"
+2014,Insects,Total Assessed,"5,304"
+2015,Insects,Total Assessed,"5,573"
+2016,Insects,Total Assessed,"6,587"
+2017,Insects,Total Assessed,"7,639"
+2018,Insects,Total Assessed,"8,037"
+2019,Insects,Total Assessed,"8,696"
+2020,Insects,Total Assessed,"10,865"
+2021,Insects,Total Assessed,"12,100"
+2022,Insects,Total Assessed,"12,161"
+2002,Insects,Total Threatened,557
+2003,Insects,Total Threatened,553
+2004,Insects,Total Threatened,559
+2006,Insects,Total Threatened,623
+2007,Insects,Total Threatened,623
+2008,Insects,Total Threatened,626
+2009,Insects,Total Threatened,711
+2010,Insects,Total Threatened,733
+2011,Insects,Total Threatened,741
+2012,Insects,Total Threatened,829
+2013,Insects,Total Threatened,896
+2014,Insects,Total Threatened,993
+2015,Insects,Total Threatened,1046
+2016,Insects,Total Threatened,1268
+2017,Insects,Total Threatened,1414
+2018,Insects,Total Threatened,1537
+2019,Insects,Total Threatened,1647
+2020,Insects,Total Threatened,1848
+2021,Insects,Total Threatened,2270
+2022,Insects,Total Threatened,2291
+2002,Insects,Vulnerable,393
+2003,Insects,Vulnerable,389
+2004,Insects,Vulnerable,392
+2006,Insects,Vulnerable,426
+2007,Insects,Vulnerable,425
+2008,Insects,Vulnerable,424
+2009,Insects,Vulnerable,471
+2010,Insects,Vulnerable,478
+2011,Insects,Vulnerable,481
+2012,Insects,Vulnerable,503
+2013,Insects,Vulnerable,524
+2014,Insects,Vulnerable,555
+2015,Insects,Vulnerable,565
+2016,Insects,Vulnerable,634
+2017,Insects,Vulnerable,680
+2018,Insects,Vulnerable,700
+2019,Insects,Vulnerable,765
+2020,Insects,Vulnerable,811
+2021,Insects,Vulnerable,925
+2022,Insects,Vulnerable,930
+2002,Mammals,Critically Endangered,181
+2003,Mammals,Critically Endangered,184
+2004,Mammals,Critically Endangered,162
+2006,Mammals,Critically Endangered,162
+2007,Mammals,Critically Endangered,163
+2008,Mammals,Critically Endangered,188
+2009,Mammals,Critically Endangered,188
+2010,Mammals,Critically Endangered,188
+2011,Mammals,Critically Endangered,194
+2012,Mammals,Critically Endangered,196
+2013,Mammals,Critically Endangered,196
+2014,Mammals,Critically Endangered,213
+2015,Mammals,Critically Endangered,209
+2016,Mammals,Critically Endangered,204
+2017,Mammals,Critically Endangered,202
+2018,Mammals,Critically Endangered,201
+2019,Mammals,Critically Endangered,203
+2020,Mammals,Critically Endangered,221
+2021,Mammals,Critically Endangered,229
+2022,Mammals,Critically Endangered,232
+2002,Mammals,Endangered,339
+2003,Mammals,Endangered,337
+2004,Mammals,Endangered,352
+2006,Mammals,Endangered,348
+2007,Mammals,Endangered,349
+2008,Mammals,Endangered,448
+2009,Mammals,Endangered,449
+2010,Mammals,Endangered,450
+2011,Mammals,Endangered,447
+2012,Mammals,Endangered,446
+2013,Mammals,Endangered,447
+2014,Mammals,Endangered,477
+2015,Mammals,Endangered,481
+2016,Mammals,Endangered,464
+2017,Mammals,Endangered,476
+2018,Mammals,Endangered,482
+2019,Mammals,Endangered,505
+2020,Mammals,Endangered,539
+2021,Mammals,Endangered,547
+2022,Mammals,Endangered,549
+2002,Mammals,Total Assessed,"2,150"
+2003,Mammals,Total Assessed,"4,789"
+2004,Mammals,Total Assessed,"4,853"
+2006,Mammals,Total Assessed,"4,864"
+2007,Mammals,Total Assessed,"4,863"
+2008,Mammals,Total Assessed,"5,488"
+2009,Mammals,Total Assessed,"5,490"
+2010,Mammals,Total Assessed,"5,491"
+2011,Mammals,Total Assessed,"5,499"
+2012,Mammals,Total Assessed,"5,501"
+2013,Mammals,Total Assessed,"5,506"
+2014,Mammals,Total Assessed,"5,513"
+2015,Mammals,Total Assessed,"5,502"
+2016,Mammals,Total Assessed,"5,567"
+2017,Mammals,Total Assessed,"5,674"
+2018,Mammals,Total Assessed,"5,692"
+2019,Mammals,Total Assessed,"5,850"
+2020,Mammals,Total Assessed,"5,940"
+2021,Mammals,Total Assessed,"5,968"
+2022,Mammals,Total Assessed,"5,969"
+2002,Mammals,Total Threatened,1137
+2003,Mammals,Total Threatened,1130
+2004,Mammals,Total Threatened,1101
+2006,Mammals,Total Threatened,1093
+2007,Mammals,Total Threatened,1094
+2008,Mammals,Total Threatened,1141
+2009,Mammals,Total Threatened,1142
+2010,Mammals,Total Threatened,1131
+2011,Mammals,Total Threatened,1138
+2012,Mammals,Total Threatened,1139
+2013,Mammals,Total Threatened,1143
+2014,Mammals,Total Threatened,1199
+2015,Mammals,Total Threatened,1197
+2016,Mammals,Total Threatened,1194
+2017,Mammals,Total Threatened,1204
+2018,Mammals,Total Threatened,1219
+2019,Mammals,Total Threatened,1244
+2020,Mammals,Total Threatened,1317
+2021,Mammals,Total Threatened,1333
+2022,Mammals,Total Threatened,1337
+2002,Mammals,Vulnerable,617
+2003,Mammals,Vulnerable,609
+2004,Mammals,Vulnerable,587
+2006,Mammals,Vulnerable,583
+2007,Mammals,Vulnerable,582
+2008,Mammals,Vulnerable,505
+2009,Mammals,Vulnerable,505
+2010,Mammals,Vulnerable,493
+2011,Mammals,Vulnerable,497
+2012,Mammals,Vulnerable,497
+2013,Mammals,Vulnerable,500
+2014,Mammals,Vulnerable,509
+2015,Mammals,Vulnerable,507
+2016,Mammals,Vulnerable,526
+2017,Mammals,Vulnerable,526
+2018,Mammals,Vulnerable,536
+2019,Mammals,Vulnerable,536
+2020,Mammals,Vulnerable,557
+2021,Mammals,Vulnerable,557
+2022,Mammals,Vulnerable,556
+2002,Molluscs,Critically Endangered,222
+2003,Molluscs,Critically Endangered,250
+2004,Molluscs,Critically Endangered,265
+2006,Molluscs,Critically Endangered,265
+2007,Molluscs,Critically Endangered,268
+2008,Molluscs,Critically Endangered,268
+2009,Molluscs,Critically Endangered,291
+2010,Molluscs,Critically Endangered,373
+2011,Molluscs,Critically Endangered,487
+2012,Molluscs,Critically Endangered,549
+2013,Molluscs,Critically Endangered,553
+2014,Molluscs,Critically Endangered,576
+2015,Molluscs,Critically Endangered,576
+2016,Molluscs,Critically Endangered,586
+2017,Molluscs,Critically Endangered,625
+2018,Molluscs,Critically Endangered,633
+2019,Molluscs,Critically Endangered,667
+2020,Molluscs,Critically Endangered,682
+2021,Molluscs,Critically Endangered,717
+2022,Molluscs,Critically Endangered,717
+2002,Molluscs,Endangered,236
+2003,Molluscs,Endangered,243
+2004,Molluscs,Endangered,221
+2006,Molluscs,Endangered,222
+2007,Molluscs,Endangered,224
+2008,Molluscs,Endangered,224
+2009,Molluscs,Endangered,245
+2010,Molluscs,Endangered,328
+2011,Molluscs,Endangered,417
+2012,Molluscs,Endangered,480
+2013,Molluscs,Endangered,486
+2014,Molluscs,Endangered,501
+2015,Molluscs,Endangered,503
+2016,Molluscs,Endangered,513
+2017,Molluscs,Endangered,547
+2018,Molluscs,Endangered,546
+2019,Molluscs,Endangered,564
+2020,Molluscs,Endangered,586
+2021,Molluscs,Endangered,599
+2022,Molluscs,Endangered,599
+2002,Molluscs,Total Assessed,"2,018"
+2003,Molluscs,Total Assessed,"2,098"
+2004,Molluscs,Total Assessed,"2,163"
+2006,Molluscs,Total Assessed,"2,163"
+2007,Molluscs,Total Assessed,"2,212"
+2008,Molluscs,Total Assessed,"2,212"
+2009,Molluscs,Total Assessed,"2,306"
+2010,Molluscs,Total Assessed,"3,149"
+2011,Molluscs,Total Assessed,"5,422"
+2012,Molluscs,Total Assessed,"6,183"
+2013,Molluscs,Total Assessed,"6,809"
+2014,Molluscs,Total Assessed,"7,217"
+2015,Molluscs,Total Assessed,"7,216"
+2016,Molluscs,Total Assessed,"7,276"
+2017,Molluscs,Total Assessed,"8,413"
+2018,Molluscs,Total Assessed,"8,627"
+2019,Molluscs,Total Assessed,"8,749"
+2020,Molluscs,Total Assessed,"8,847"
+2021,Molluscs,Total Assessed,"9,019"
+2022,Molluscs,Total Assessed,"9,017"
+2002,Molluscs,Total Threatened,939
+2003,Molluscs,Total Threatened,967
+2004,Molluscs,Total Threatened,974
+2006,Molluscs,Total Threatened,975
+2007,Molluscs,Total Threatened,978
+2008,Molluscs,Total Threatened,978
+2009,Molluscs,Total Threatened,1036
+2010,Molluscs,Total Threatened,1288
+2011,Molluscs,Total Threatened,1673
+2012,Molluscs,Total Threatened,1857
+2013,Molluscs,Total Threatened,1898
+2014,Molluscs,Total Threatened,1950
+2015,Molluscs,Total Threatened,1950
+2016,Molluscs,Total Threatened,1984
+2017,Molluscs,Total Threatened,2187
+2018,Molluscs,Total Threatened,2195
+2019,Molluscs,Total Threatened,2250
+2020,Molluscs,Total Threatened,2300
+2021,Molluscs,Total Threatened,2385
+2022,Molluscs,Total Threatened,2384
+2002,Molluscs,Vulnerable,481
+2003,Molluscs,Vulnerable,474
+2004,Molluscs,Vulnerable,488
+2006,Molluscs,Vulnerable,488
+2007,Molluscs,Vulnerable,486
+2008,Molluscs,Vulnerable,486
+2009,Molluscs,Vulnerable,500
+2010,Molluscs,Vulnerable,587
+2011,Molluscs,Vulnerable,769
+2012,Molluscs,Vulnerable,828
+2013,Molluscs,Vulnerable,859
+2014,Molluscs,Vulnerable,873
+2015,Molluscs,Vulnerable,871
+2016,Molluscs,Vulnerable,885
+2017,Molluscs,Vulnerable,1015
+2018,Molluscs,Vulnerable,1016
+2019,Molluscs,Vulnerable,1019
+2020,Molluscs,Vulnerable,1032
+2021,Molluscs,Vulnerable,1069
+2022,Molluscs,Vulnerable,1068
+2002,Other Invertebrates,Critically Endangered,59
+2003,Other Invertebrates,Critically Endangered,61
+2004,Other Invertebrates,Critically Endangered,61
+2006,Other Invertebrates,Critically Endangered,84
+2007,Other Invertebrates,Critically Endangered,86
+2008,Other Invertebrates,Critically Endangered,99
+2009,Other Invertebrates,Critically Endangered,99
+2010,Other Invertebrates,Critically Endangered,132
+2011,Other Invertebrates,Critically Endangered,132
+2012,Other Invertebrates,Critically Endangered,132
+2013,Other Invertebrates,Critically Endangered,154
+2014,Other Invertebrates,Critically Endangered,205
+2015,Other Invertebrates,Critically Endangered,209
+2016,Other Invertebrates,Critically Endangered,211
+2017,Other Invertebrates,Critically Endangered,243
+2018,Other Invertebrates,Critically Endangered,252
+2019,Other Invertebrates,Critically Endangered,270
+2020,Other Invertebrates,Critically Endangered,282
+2021,Other Invertebrates,Critically Endangered,290
+2022,Other Invertebrates,Critically Endangered,291
+2002,Other Invertebrates,Endangered,77
+2003,Other Invertebrates,Endangered,76
+2004,Other Invertebrates,Endangered,82
+2006,Other Invertebrates,Endangered,96
+2007,Other Invertebrates,Endangered,96
+2008,Other Invertebrates,Endangered,165
+2009,Other Invertebrates,Endangered,164
+2010,Other Invertebrates,Endangered,183
+2011,Other Invertebrates,Endangered,183
+2012,Other Invertebrates,Endangered,183
+2013,Other Invertebrates,Endangered,224
+2014,Other Invertebrates,Endangered,307
+2015,Other Invertebrates,Endangered,311
+2016,Other Invertebrates,Endangered,312
+2017,Other Invertebrates,Endangered,340
+2018,Other Invertebrates,Endangered,348
+2019,Other Invertebrates,Endangered,344
+2020,Other Invertebrates,Endangered,347
+2021,Other Invertebrates,Endangered,370
+2022,Other Invertebrates,Endangered,371
+2002,Other Invertebrates,Total Assessed,513
+2003,Other Invertebrates,Total Assessed,516
+2004,Other Invertebrates,Total Assessed,553
+2006,Other Invertebrates,Total Assessed,623
+2007,Other Invertebrates,Total Assessed,649
+2008,Other Invertebrates,Total Assessed,"2,690"
+2009,Other Invertebrates,Total Assessed,"2,690"
+2010,Other Invertebrates,Total Assessed,"3,108"
+2011,Other Invertebrates,Total Assessed,"3,355"
+2012,Other Invertebrates,Total Assessed,"3,356"
+2013,Other Invertebrates,Total Assessed,"4,492"
+2014,Other Invertebrates,Total Assessed,"4,697"
+2015,Other Invertebrates,Total Assessed,"4,727"
+2016,Other Invertebrates,Total Assessed,"4,746"
+2017,Other Invertebrates,Total Assessed,"5,078"
+2018,Other Invertebrates,Total Assessed,"5,222"
+2019,Other Invertebrates,Total Assessed,"5,243"
+2020,Other Invertebrates,Total Assessed,"5,267"
+2021,Other Invertebrates,Total Assessed,"5,395"
+2022,Other Invertebrates,Total Assessed,"5,403"
+2002,Other Invertebrates,Total Threatened,436
+2003,Other Invertebrates,Total Threatened,439
+2004,Other Invertebrates,Total Threatened,459
+2006,Other Invertebrates,Total Threatened,503
+2007,Other Invertebrates,Total Threatened,507
+2008,Other Invertebrates,Total Threatened,892
+2009,Other Invertebrates,Total Threatened,892
+2010,Other Invertebrates,Total Threatened,883
+2011,Other Invertebrates,Total Threatened,883
+2012,Other Invertebrates,Total Threatened,884
+2013,Other Invertebrates,Total Threatened,1028
+2014,Other Invertebrates,Total Threatened,1197
+2015,Other Invertebrates,Total Threatened,1205
+2016,Other Invertebrates,Total Threatened,1218
+2017,Other Invertebrates,Total Threatened,1292
+2018,Other Invertebrates,Total Threatened,1308
+2019,Other Invertebrates,Total Threatened,1324
+2020,Other Invertebrates,Total Threatened,1341
+2021,Other Invertebrates,Total Threatened,1387
+2022,Other Invertebrates,Total Threatened,1391
+2002,Other Invertebrates,Vulnerable,300
+2003,Other Invertebrates,Vulnerable,302
+2004,Other Invertebrates,Vulnerable,316
+2006,Other Invertebrates,Vulnerable,323
+2007,Other Invertebrates,Vulnerable,325
+2008,Other Invertebrates,Vulnerable,628
+2009,Other Invertebrates,Vulnerable,629
+2010,Other Invertebrates,Vulnerable,568
+2011,Other Invertebrates,Vulnerable,568
+2012,Other Invertebrates,Vulnerable,569
+2013,Other Invertebrates,Vulnerable,650
+2014,Other Invertebrates,Vulnerable,685
+2015,Other Invertebrates,Vulnerable,685
+2016,Other Invertebrates,Vulnerable,695
+2017,Other Invertebrates,Vulnerable,709
+2018,Other Invertebrates,Vulnerable,708
+2019,Other Invertebrates,Vulnerable,710
+2020,Other Invertebrates,Vulnerable,712
+2021,Other Invertebrates,Vulnerable,727
+2022,Other Invertebrates,Vulnerable,729
+2002,Plants,Critically Endangered,1046
+2003,Plants,Critically Endangered,1276
+2004,Plants,Critically Endangered,1490
+2006,Plants,Critically Endangered,1541
+2007,Plants,Critically Endangered,1569
+2008,Plants,Critically Endangered,1575
+2009,Plants,Critically Endangered,1577
+2010,Plants,Critically Endangered,1619
+2011,Plants,Critically Endangered,1731
+2012,Plants,Critically Endangered,1821
+2013,Plants,Critically Endangered,1957
+2014,Plants,Critically Endangered,2119
+2015,Plants,Critically Endangered,2347
+2016,Plants,Critically Endangered,2506
+2017,Plants,Critically Endangered,2722
+2018,Plants,Critically Endangered,2879
+2019,Plants,Critically Endangered,3229
+2020,Plants,Critically Endangered,4337
+2021,Plants,Critically Endangered,4976
+2022,Plants,Critically Endangered,5232
+2002,Plants,Endangered,1291
+2003,Plants,Endangered,1634
+2004,Plants,Endangered,2239
+2006,Plants,Endangered,2258
+2007,Plants,Endangered,2278
+2008,Plants,Endangered,2280
+2009,Plants,Endangered,2316
+2010,Plants,Endangered,2397
+2011,Plants,Endangered,2564
+2012,Plants,Endangered,2655
+2013,Plants,Endangered,3009
+2014,Plants,Endangered,3231
+2015,Plants,Endangered,3510
+2016,Plants,Endangered,3691
+2017,Plants,Endangered,4123
+2018,Plants,Endangered,4537
+2019,Plants,Endangered,5727
+2020,Plants,Endangered,7925
+2021,Plants,Endangered,9400
+2022,Plants,Endangered,9996
+2002,Plants,Total Assessed,"7,150"
+2003,Plants,Total Assessed,"9,706"
+2004,Plants,Total Assessed,"11,824"
+2006,Plants,Total Assessed,"11,901"
+2007,Plants,Total Assessed,"12,043"
+2008,Plants,Total Assessed,"12,055"
+2009,Plants,Total Assessed,"12,151"
+2010,Plants,Total Assessed,"12,914"
+2011,Plants,Total Assessed,"14,496"
+2012,Plants,Total Assessed,"15,674"
+2013,Plants,Total Assessed,"18,291"
+2014,Plants,Total Assessed,"19,738"
+2015,Plants,Total Assessed,"20,755"
+2016,Plants,Total Assessed,"22,253"
+2017,Plants,Total Assessed,"24,230"
+2018,Plants,Total Assessed,"27,514"
+2019,Plants,Total Assessed,"38,630"
+2020,Plants,Total Assessed,"50,369"
+2021,Plants,Total Assessed,"58,343"
+2022,Plants,Total Assessed,"61,371"
+2002,Plants,Total Threatened,5714
+2003,Plants,Total Threatened,6774
+2004,Plants,Total Threatened,8321
+2006,Plants,Total Threatened,8390
+2007,Plants,Total Threatened,8447
+2008,Plants,Total Threatened,8457
+2009,Plants,Total Threatened,8500
+2010,Plants,Total Threatened,8724
+2011,Plants,Total Threatened,9156
+2012,Plants,Total Threatened,9390
+2013,Plants,Total Threatened,10065
+2014,Plants,Total Threatened,10584
+2015,Plants,Total Threatened,11233
+2016,Plants,Total Threatened,11643
+2017,Plants,Total Threatened,12505
+2018,Plants,Total Threatened,13299
+2019,Plants,Total Threatened,15774
+2020,Plants,Total Threatened,20360
+2021,Plants,Total Threatened,23335
+2022,Plants,Total Threatened,24449
+2002,Plants,Vulnerable,3377
+2003,Plants,Vulnerable,3864
+2004,Plants,Vulnerable,4592
+2006,Plants,Vulnerable,4591
+2007,Plants,Vulnerable,4600
+2008,Plants,Vulnerable,4602
+2009,Plants,Vulnerable,4607
+2010,Plants,Vulnerable,4708
+2011,Plants,Vulnerable,4861
+2012,Plants,Vulnerable,4914
+2013,Plants,Vulnerable,5099
+2014,Plants,Vulnerable,5234
+2015,Plants,Vulnerable,5376
+2016,Plants,Vulnerable,5446
+2017,Plants,Vulnerable,5660
+2018,Plants,Vulnerable,5883
+2019,Plants,Vulnerable,6818
+2020,Plants,Vulnerable,8098
+2021,Plants,Vulnerable,8959
+2022,Plants,Vulnerable,9221
+2002,Reptiles,Critically Endangered,55
+2003,Reptiles,Critically Endangered,57
+2004,Reptiles,Critically Endangered,64
+2006,Reptiles,Critically Endangered,73
+2007,Reptiles,Critically Endangered,79
+2008,Reptiles,Critically Endangered,86
+2009,Reptiles,Critically Endangered,93
+2010,Reptiles,Critically Endangered,106
+2011,Reptiles,Critically Endangered,137
+2012,Reptiles,Critically Endangered,144
+2013,Reptiles,Critically Endangered,164
+2014,Reptiles,Critically Endangered,174
+2015,Reptiles,Critically Endangered,180
+2016,Reptiles,Critically Endangered,237
+2017,Reptiles,Critically Endangered,266
+2018,Reptiles,Critically Endangered,287
+2019,Reptiles,Critically Endangered,309
+2020,Reptiles,Critically Endangered,324
+2021,Reptiles,Critically Endangered,433
+2022,Reptiles,Critically Endangered,433
+2002,Reptiles,Endangered,79
+2003,Reptiles,Endangered,78
+2004,Reptiles,Endangered,79
+2006,Reptiles,Endangered,101
+2007,Reptiles,Endangered,139
+2008,Reptiles,Endangered,134
+2009,Reptiles,Endangered,150
+2010,Reptiles,Endangered,200
+2011,Reptiles,Endangered,284
+2012,Reptiles,Endangered,296
+2013,Reptiles,Endangered,329
+2014,Reptiles,Endangered,356
+2015,Reptiles,Endangered,361
+2016,Reptiles,Endangered,421
+2017,Reptiles,Endangered,484
+2018,Reptiles,Endangered,515
+2019,Reptiles,Endangered,565
+2020,Reptiles,Endangered,584
+2021,Reptiles,Endangered,783
+2022,Reptiles,Endangered,787
+2002,Reptiles,Total Assessed,453
+2003,Reptiles,Total Assessed,473
+2004,Reptiles,Total Assessed,499
+2006,Reptiles,Total Assessed,664
+2007,Reptiles,Total Assessed,"1,385"
+2008,Reptiles,Total Assessed,"1,385"
+2009,Reptiles,Total Assessed,"1,677"
+2010,Reptiles,Total Assessed,"2,806"
+2011,Reptiles,Total Assessed,"3,336"
+2012,Reptiles,Total Assessed,"3,755"
+2013,Reptiles,Total Assessed,"4,204"
+2014,Reptiles,Total Assessed,"4,414"
+2015,Reptiles,Total Assessed,"4,669"
+2016,Reptiles,Total Assessed,"5,338"
+2017,Reptiles,Total Assessed,"6,278"
+2018,Reptiles,Total Assessed,"7,127"
+2019,Reptiles,Total Assessed,"7,829"
+2020,Reptiles,Total Assessed,"8,492"
+2021,Reptiles,Total Assessed,"10,148"
+2022,Reptiles,Total Assessed,"10,150"
+2002,Reptiles,Total Threatened,293
+2003,Reptiles,Total Threatened,293
+2004,Reptiles,Total Threatened,304
+2006,Reptiles,Total Threatened,341
+2007,Reptiles,Total Threatened,422
+2008,Reptiles,Total Threatened,423
+2009,Reptiles,Total Threatened,469
+2010,Reptiles,Total Threatened,594
+2011,Reptiles,Total Threatened,772
+2012,Reptiles,Total Threatened,807
+2013,Reptiles,Total Threatened,879
+2014,Reptiles,Total Threatened,927
+2015,Reptiles,Total Threatened,944
+2016,Reptiles,Total Threatened,1079
+2017,Reptiles,Total Threatened,1215
+2018,Reptiles,Total Threatened,1307
+2019,Reptiles,Total Threatened,1409
+2020,Reptiles,Total Threatened,1449
+2021,Reptiles,Total Threatened,1839
+2022,Reptiles,Total Threatened,1845
+2002,Reptiles,Vulnerable,159
+2003,Reptiles,Vulnerable,158
+2004,Reptiles,Vulnerable,161
+2006,Reptiles,Vulnerable,167
+2007,Reptiles,Vulnerable,204
+2008,Reptiles,Vulnerable,203
+2009,Reptiles,Vulnerable,226
+2010,Reptiles,Vulnerable,288
+2011,Reptiles,Vulnerable,351
+2012,Reptiles,Vulnerable,367
+2013,Reptiles,Vulnerable,386
+2014,Reptiles,Vulnerable,397
+2015,Reptiles,Vulnerable,403
+2016,Reptiles,Vulnerable,421
+2017,Reptiles,Vulnerable,465
+2018,Reptiles,Vulnerable,505
+2019,Reptiles,Vulnerable,535
+2020,Reptiles,Vulnerable,541
+2021,Reptiles,Vulnerable,623
+2022,Reptiles,Vulnerable,625
