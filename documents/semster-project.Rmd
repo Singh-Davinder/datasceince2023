@@ -24,8 +24,10 @@ read.csv(file = "../data-raw/IUCN Red List Changes - 2002 to 2022 - Multiple Mea
 Single_Measure %>% 
   filter(Class == "Amphibians" | Class == "	
 Birds" | Class == "Fishes" | Class == "Fungi & Protists") %>% 
-  group_by(Class, Metric)
+  group_by(Class, Metric) %>% 
+  head()
 ```
+Taking a look at species that are in danger of becoming endangered
 ```{r}
 #as.integer(Single_Measure$Number.of.Species)
 Single_Measure %>% 
@@ -37,6 +39,7 @@ ggplot(mapping = aes(x = Year, y = Species, color = Metric)) +
   facet_wrap(~Class, scales = "free_y")
 str(Single_Measure)
 ```
+Trends that show the rate of extinct for each species. Amphibians, Birds, fishes, insects, Mammals, Molluscs, Invertebrate, Plants, reptiles have graphs that show that these species are threatened to go instinct. While Fungi and protist is the largest group that has been assessed
 ```{r}
 Single_Measure %>% 
   filter(Class == "amphibians" | Class == "Mammals" | Class == "Fungi & Protists" | Class == "Mollus" | Class == "Reptiles" | Class == "Plants" | Class == "Other Invertebrates") %>% 
@@ -47,6 +50,7 @@ Single_Measure %>%
   geom_point(size = 1) +
   facet_wrap(~Class, scales = "free_y")
 ```
+Classes of species that are classes based on how threatned they are to becoming endangered.
 ```{r}
 intersect(colnames(Single_Measure), colnames(Multiple_Measure))
 ```
@@ -54,6 +58,7 @@ intersect(colnames(Single_Measure), colnames(Multiple_Measure))
 inner_join(Single_Measure, Multiple_Measure, by = "Year") %>% 
   filter(Year == "2018")
 ```
+ Two datasets that are joined to see the total amount of species threatend to becoming endangered in the year of 2018
 ```{r}
 inner_join(Single_Measure, Multiple_Measure, by = "Year") %>% 
   select(Year, Class, Metric, Number.of.Species) %>% 
@@ -64,6 +69,7 @@ inner_join(Single_Measure, Multiple_Measure, by = "Year") %>%
   geom_line(mapping = aes(x = Year, y = Species, color = Metric)) +
   facet_wrap(~Class, scales = "free_y")
 ```
+Graphs that show the two dataset joined to assess how endangered each species are from the early 2000's to present day. Similar to the previous data as most species are threatned to becoming endangered
 
 ```{r}
 Multiple_Measure %>%
@@ -71,6 +77,7 @@ Multiple_Measure %>%
   mutate(endangered = Mammal.Species.Critically.Endangered * Other.Invertebrate.Species.Critically.Endangered) %>% 
   summarize(mean_endangered = mean(endangered))
 ```
+The average number of mammals that are on the verge of becoming endangered. Important to understand as mammals are vitale for humans such as for food, perceiving life on earth etc.
 ```{r}
 #assessed <- function(mass_assessed){
   #if (Year <= 2012){
@@ -89,18 +96,18 @@ Multiple_Measure %>%
 ```
 
 ```{r}
-#SM_tree <- tnrs_match_names(names = "Amphibians")
-#tol_subtree(ott_id = SM_tree$ott_id) -> amphibian_tree
-#SM_tree
+SM_tree <- tnrs_match_names(names = "Mammal")
+tol_subtree(ott_id = SM_tree$ott_id) -> Mammal_tree
+SM_tree
 ```
 ```{r}
-#str(amphibian_tree)
-#class(amphibian_tree)
-#class(SM_tree)
-#Ntip(amphibian_tree)
+str( Mammal_tree)
+class( Mammal_tree)
+class(SM_tree)
+Ntip( Mammal_tree)
 ```
-```{r fig.height= 15, fig.width= 10}
-#plot.phylo(x = amphibian_tree, cex = 2)
+```{r fig.height= 10, fig.width= 8}
+plot.phylo(x =  Mammal_tree, cex = 0.5)
 ```
 
 
@@ -119,6 +126,7 @@ Single_Measure %>%
   filter(Class == "Birds") %>% 
   summarize(bird_mean = mean(Species))
 ```
+Taking look at birds which are closely related to reptiles and seeing how the average of birds have changed throughout the years
 
 ```{r}
 c("Mammal", "Fungi", "insects", "Amphibians", "Protist", "Molluscs", "Plants") -> SM_tree_Class
